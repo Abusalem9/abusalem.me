@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+/* Tailwind resolves these to var(--color-*), so overriding the variables
+   per theme below re-skins every utility without recompiling anything. */
+@theme {
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent2: var(--accent2);
+  --color-accent2-deep: var(--accent2-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-pop: var(--pop);
+  /* text placed ON an accent fill, and accent-as-text on light panels */
+  --color-on-accent: var(--on-accent);
+  --color-accent-ink: var(--accent-ink);
+
+  --font-display: var(--display-family);
+  --font-comic: var(--comic-family);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ── Spider-Man: newsprint red, comic blue, off-register print ── */
+:root,
+:root[data-theme="spider"] {
+  --accent: #e62429;
+  --accent-deep: #a4161a;
+  --accent2: #3f5bd9;
+  --accent2-deep: #2b3784;
+  --ink: #08080d;
+  --ink-soft: #12121c;
+  --fg: #f2f4ff;
+  --muted: #a9aec9;
+  --pop: #ffd23f;
+  --on-accent: #f7f8ff;
+  --accent-ink: #c81a1f;
+  --display-family: var(--font-anton), "Impact", sans-serif;
+  --comic-family: var(--font-bangers), "Comic Sans MS", cursive;
+  --dot-size: 16px;
+  --dot-radius: 1.5px;
+  --panel-radius: 0px;
+}
+
+/* ── Kung Fu Panda: imperial gold, jade, warm ink and parchment ── */
+:root[data-theme="panda"] {
+  --accent: #e8a733;
+  --accent-deep: #a86f14;
+  --accent2: #35a877;
+  --accent2-deep: #1d6b4a;
+  --ink: #0d0b07;
+  --ink-soft: #191309;
+  --fg: #f7efdd;
+  --muted: #c2b295;
+  --pop: #efd9a0;
+  --on-accent: #0d0b07;
+  --accent-ink: #8a5a0c;
+  --display-family: var(--font-yeseva), Georgia, serif;
+  --comic-family: var(--font-caveat), "Comic Sans MS", cursive;
+  --dot-size: 22px;
+  --dot-radius: 1.1px;
+  --panel-radius: 14px;
+}
+
+/* ── Minions: goggle yellow, denim blue, rivets ── */
+:root[data-theme="minion"] {
+  --accent: #ffc800;
+  --accent-deep: #d19b00;
+  --accent2: #5b9bd5;
+  --accent2-deep: #2f5f96;
+  --ink: #0a1120;
+  --ink-soft: #131f36;
+  --fg: #fdfbf2;
+  --muted: #a9b6cd;
+  --pop: #ffffff;
+  --on-accent: #0a1120;
+  /* minion yellow is unreadable on cream, so the light-surface accent is denim */
+  --accent-ink: #2f5f96;
+  --display-family: var(--font-luckiest), "Comic Sans MS", cursive;
+  --comic-family: var(--font-bangers), "Comic Sans MS", cursive;
+  --dot-size: 20px;
+  --dot-radius: 2.2px;
+  --panel-radius: 999px;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+  47% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  53% {
+    opacity: 0.9;
+  }
+  71% {
+    opacity: 0.7;
+  }
+  74% {
+    opacity: 0.9;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-ink);
+}
+
+/* No background on <body>: the page canvas gets its colour from <html>, and
+   an opaque body background would paint over the fixed -z-10 backdrop. */
+body {
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Hide the OS cursor only where the web-shooter cursor takes over
+   (pointer:fine === real mouse, so touch devices keep normal behaviour) */
+@media (pointer: fine) {
+  body[data-webcursor="on"],
+  body[data-webcursor="on"] * {
+    cursor: none;
+  }
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-fg);
+}
+
+/* ── Halftone dot field ────────────────────────────────
+   Two offset dot grids. Each theme sets its own grid + dot size, so this
+   reads as newsprint for Spider-Man, rice paper for Panda, and big loud
+   polka dots for the Minions. */
+.halftone {
+  background-image:
+    radial-gradient(
+      circle at center,
+      color-mix(in srgb, var(--color-accent) 90%, transparent) var(--dot-radius),
+      transparent calc(var(--dot-radius) + 0.1px)
+    ),
+    radial-gradient(
+      circle at center,
+      color-mix(in srgb, var(--color-accent2) 80%, transparent) var(--dot-radius),
+      transparent calc(var(--dot-radius) + 0.1px)
+    );
+  background-size: var(--dot-size) var(--dot-size), var(--dot-size) var(--dot-size);
+  background-position: 0 0, calc(var(--dot-size) / 2) calc(var(--dot-size) / 2);
+}
+
+/* Panda swaps the dot grid for brushed rice-paper fibres. */
+:root[data-theme="panda"] .halftone {
+  background-image:
+    repeating-linear-gradient(
+      92deg,
+      color-mix(in srgb, var(--color-accent) 30%, transparent) 0 1px,
+      transparent 1px 9px
+    ),
+    repeating-linear-gradient(
+      2deg,
+      color-mix(in srgb, var(--color-accent2) 22%, transparent) 0 1px,
+      transparent 1px 14px
+    );
+  background-size: auto, auto;
+  background-position: 0 0, 0 0;
+}
+
+/* ── Panel: thick border + hard offset shadow ────────── */
+.panel {
+  border: 3px solid var(--color-ink);
+  box-shadow: 6px 6px 0 0 var(--color-ink);
+  border-radius: var(--panel-radius);
+}
+
+.panel-light {
+  border: 3px solid var(--color-fg);
+  box-shadow: 6px 6px 0 0 var(--color-accent2-deep);
+  border-radius: var(--panel-radius);
+}
+
+/* A pill radius suits the buttons but would balloon the big cards. */
+:root[data-theme="minion"] .panel,
+:root[data-theme="minion"] .panel-light {
+  border-radius: 22px;
+}
+
+/* ── Chunky comic text outline for headlines ──────────── */
+.ink-outline {
+  -webkit-text-stroke: 2px var(--color-ink);
+  paint-order: stroke fill;
+}
+
+/* Off-register print: a colour plate laid a hair off the black one. */
+.text-shadow-comic {
+  text-shadow:
+    2px 2px 0 var(--color-ink),
+    4px 4px 0 var(--color-accent);
+}
+
+/* Panda's serif doesn't want a hard offset plate — a soft ink bleed suits it. */
+:root[data-theme="panda"] .text-shadow-comic {
+  text-shadow:
+    0 2px 14px color-mix(in srgb, var(--color-accent) 45%, transparent),
+    2px 3px 0 var(--color-ink);
+}
+
+/* ── Subtle CRT/print grain over the whole page ───────── */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* ── Respect reduced-motion across the whole site ─────── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
