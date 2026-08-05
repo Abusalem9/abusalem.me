@@ -51,6 +51,9 @@ live once in `src/content/portfolio.ts` and are shared by all three.
 | Display + accent fonts  | same block (`--display-family`, `--comic-family`)  |
 | Background texture      | `--dot-size` / `--dot-radius`, and the `.halftone` override |
 | Cursor, ornament, mascot| `cursor` / `ornament` fields in `src/themes/index.ts` |
+| Heading rule + marquee bullet | `divider` / `bullet` in `src/themes/index.ts` |
+| How the theme *moves* | `feel` in `src/themes/index.ts` — spring stiffness/damping, hover lift, card tilt. Spider-Man is snappy, Panda slow, Minions overshoot. |
+| Hero type size | `--hero-size` per theme in `globals.css` (display faces differ a lot in width) |
 | Section names, nav labels, sound effects, eyebrow, footer line | `src/themes/index.ts` |
 
 To add a fourth theme: add an entry to `themes` in `src/themes/index.ts`, add a
@@ -75,6 +78,9 @@ denim blue.
 | `components/Skills`          | Web-strand meters with a spider riding the tip                                                               |
 | `components/Experience`      | Timeline strand that pays out as you scroll                                                                  |
 | `components/Feats`           | Hard-numbers panels and achievement cards                                                                    |
+| `components/HangingCard`     | The "currently" card strung from the top of the hero, mascot riding the thread                                |
+| `components/Marquee`         | Tilted full-bleed band of skills scrolling between sections                                                   |
+| `components/ui/Divider`      | The rule under each heading, in the theme's hand: web strand, brush stroke or stitched seam                   |
 
 Shared shape (panels, halftone, print offset) lives in `src/app/globals.css`;
 each theme's values sit in its own `:root[data-theme=...]` block above it.

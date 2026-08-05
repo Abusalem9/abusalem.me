@@ -40,7 +40,7 @@ export default function Experience() {
 
         <ol className="space-y-16">
           {experience.map((job) => (
-            <li key={job.company} className="relative pl-8 md:pl-12">
+            <li key={job.company} className="relative pl-8 md:pl-12 lg:grid lg:grid-cols-[16rem_1fr] lg:gap-10">
               {/* company node */}
               <motion.span
                 aria-hidden
@@ -58,6 +58,8 @@ export default function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.55, ease: [0.2, 0.8, 0.2, 1] }}
+                // the company stays pinned while its roles scroll past
+                className="lg:sticky lg:top-28 lg:self-start"
               >
                 <h3 className="font-display text-3xl uppercase tracking-wide text-fg md:text-4xl">
                   {job.company}
@@ -71,7 +73,7 @@ export default function Experience() {
                 </p>
               </motion.header>
 
-              <ol className="mt-8 space-y-10">
+              <ol className="mt-8 space-y-10 lg:mt-0">
                 {job.roles.map((role, r) => (
                   <motion.li
                     key={role.title}

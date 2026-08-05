@@ -1,17 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { projects, type Project } from "@/content/portfolio";
 import { useTheme } from "@/themes/ThemeProvider";
 import Section from "./ui/Section";
 import SectionHeading from "./ui/SectionHeading";
 import Sfx from "./ui/Sfx";
 
-/** Concentric spider-sense arcs that pulse out while a card is hovered. */
-function SpiderSense() {
+/**
+ * Rings that pulse out of the card corner while it's hovered — spider-sense
+ * for Spider-Man, an ink ripple for Panda, a goggle blink for the Minions.
+ * Same idea, three different rhythms.
+ */
+function HoverPulse({ shape }: { shape: "web" | "ink" | "goggle" }) {
+  const cfg = {
+    web: { count: 3, duration: 1.2, gap: 0.4, cls: "border-2 border-accent" },
+    ink: { count: 2, duration: 2.4, gap: 1.1, cls: "border border-accent/70" },
+    goggle: { count: 3, duration: 0.9, gap: 0.22, cls: "border-4 border-accent" },
+  }[shape];
+
   return (
     <span aria-hidden className="pointer-events-none absolute -right-3 -top-3 h-24 w-24">
-      {[0, 1, 2].map((i) => (
+      {Array.from({ length: cfg.count }, (_, i) => (
         <motion.span
           key={i}
           variants={{
@@ -20,14 +31,14 @@ function SpiderSense() {
               scale: [0.3, 1.15],
               opacity: [0.85, 0],
               transition: {
-                duration: 1.2,
+                duration: cfg.duration,
                 repeat: Infinity,
-                delay: i * 0.4,
+                delay: i * cfg.gap,
                 ease: "easeOut",
               },
             },
           }}
-          className="absolute inset-0 rounded-full border-2 border-accent"
+          className={`absolute inset-0 rounded-full ${cfg.cls}`}
         />
       ))}
     </span>
@@ -37,15 +48,39 @@ function SpiderSense() {
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const { theme } = useTheme();
   const sfx = project.sfx ?? theme.projectSfx[index % theme.projectSfx.length];
+  const ref = useRef<HTMLElement>(null);
+
+  // Card leans toward the pointer. Each theme leans by a different amount and
+  // settles at its own rate, so the tilt carries the theme's personality.
+  const px = useMotionValue(0);
+  const py = useMotionValue(0);
+  const spring = { stiffness: theme.feel.stiffness, damping: theme.feel.damping };
+  const rotateX = useSpring(useTransform(py, [-0.5, 0.5], [theme.feel.tilt, -theme.feel.tilt]), spring);
+  const rotateY = useSpring(useTransform(px, [-0.5, 0.5], [-theme.feel.tilt, theme.feel.tilt]), spring);
+
+  const onMove = (e: React.PointerEvent) => {
+    const r = ref.current?.getBoundingClientRect();
+    if (!r) return;
+    px.set((e.clientX - r.left) / r.width - 0.5);
+    py.set((e.clientY - r.top) / r.height - 0.5);
+  };
+  const onLeave = () => {
+    px.set(0);
+    py.set(0);
+  };
+
   return (
     <motion.article
+      ref={ref}
       initial="rest"
       whileInView="rest"
       whileHover="hover"
       whileFocus="hover"
       viewport={{ once: true }}
+      onPointerMove={onMove}
+      onPointerLeave={onLeave}
       data-spidey
-      className="group relative"
+      className="group relative [perspective:1100px]"
     >
       <motion.div
         initial={{ opacity: 0, y: 40, rotate: index % 2 ? 1.5 : -1.5 }}
@@ -54,8 +89,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         transition={{ duration: 0.6, delay: (index % 2) * 0.1 }}
         variants={{
           rest: { y: 0, rotate: 0 },
-          hover: { y: -8, rotate: index % 2 ? 0.8 : -0.8 },
+          hover: { y: theme.feel.lift, rotate: index % 2 ? 0.8 : -0.8 },
         }}
+        style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         className="panel-light relative h-full overflow-hidden bg-ink-soft/90 p-7 backdrop-blur-sm transition-shadow duration-300 group-hover:shadow-[10px_10px_0_0_var(--color-accent)] md:p-9"
       >
         {/* halftone wash that lights up on hover */}
@@ -64,7 +100,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           className="halftone pointer-events-none absolute inset-0 opacity-[0.07] transition-opacity duration-500 group-hover:opacity-25"
         />
 
-        <SpiderSense />
+        <HoverPulse shape={theme.cursor} />
 
         <span className="relative font-mono text-xs tracking-[0.3em] text-accent">
           #{String(index + 1).padStart(2, "0")}

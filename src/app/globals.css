@@ -40,6 +40,7 @@
   --dot-size: 16px;
   --dot-radius: 1.5px;
   --panel-radius: 0px;
+  --hero-size: clamp(3rem, 12vw, 9rem);
 }
 
 /* ── Kung Fu Panda: imperial gold, jade, warm ink and parchment ── */
@@ -60,6 +61,8 @@
   --dot-size: 22px;
   --dot-radius: 1.1px;
   --panel-radius: 14px;
+  /* Yeseva is a wide serif — it needs to sit smaller to fit the column */
+  --hero-size: clamp(2.4rem, 8.6vw, 6.5rem);
 }
 
 /* ── Minions: goggle yellow, denim blue, rivets ── */
@@ -81,6 +84,7 @@
   --dot-size: 20px;
   --dot-radius: 2.2px;
   --panel-radius: 999px;
+  --hero-size: clamp(2.7rem, 10.2vw, 7.6rem);
 }
 
 @keyframes flicker {

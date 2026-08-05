@@ -35,6 +35,16 @@ export const hero = {
   ctaSecondary: { label: "Get in touch", href: "#contact" },
 };
 
+/** The card that hangs beside the hero on wide screens. */
+export const heroCard = {
+  label: "Currently",
+  role: "Technical Lead",
+  company: "Pallet",
+  location: "Bengaluru, India",
+  stack: ["Java", "Spring Boot", "GCP", "Elasticsearch"],
+  footnote: "Backend team of six",
+};
+
 export const about = {
   heading: "ORIGIN STORY",
   paragraphs: [

@@ -5,6 +5,7 @@ import Experience from "@/components/Experience";
 import Feats from "@/components/Feats";
 import Hero from "@/components/Hero";
 import IntroCurtain from "@/components/IntroCurtain";
+import Marquee from "@/components/Marquee";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
@@ -20,6 +21,7 @@ export default function Home() {
 
       <main className="relative">
         <Hero />
+        <Marquee />
         <About />
         <Skills />
         <Projects />

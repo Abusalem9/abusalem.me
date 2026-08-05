@@ -36,6 +36,23 @@ export type Theme = {
   projectSfx: string[];
   /** The word stamped on the loading curtain */
   intro: string;
+  /** Shape of the rule under each section heading */
+  divider: "web" | "brush" | "stitch";
+  /** Separator drawn between words in the scrolling band */
+  bullet: string;
+  /**
+   * How the theme moves. Spider-Man is snappy, Panda is slow and deliberate,
+   * the Minions overshoot and wobble. Cards and buttons read from this so a
+   * theme feels different even before you notice the colours.
+   */
+  feel: {
+    stiffness: number;
+    damping: number;
+    /** px a card rises on hover */
+    lift: number;
+    /** max degrees of pointer tilt on a card */
+    tilt: number;
+  };
 };
 
 export const themes: Record<ThemeId, Theme> = {
@@ -74,6 +91,9 @@ export const themes: Record<ThemeId, Theme> = {
     },
     projectSfx: ["THWIP!", "POW!", "BAM!", "ZAP!", "KRAK!", "SNIKT!"],
     intro: "THWIP!",
+    divider: "web",
+    bullet: "✦",
+    feel: { stiffness: 380, damping: 26, lift: -8, tilt: 7 },
   },
 
   panda: {
@@ -111,6 +131,9 @@ export const themes: Record<ThemeId, Theme> = {
     },
     projectSfx: ["SKADOOSH!", "HIYAA!", "WHATAA!", "KI-YAH!", "WUXI!", "SHIFU!"],
     intro: "SKADOOSH!",
+    divider: "brush",
+    bullet: "❉",
+    feel: { stiffness: 130, damping: 22, lift: -5, tilt: 3 },
   },
 
   minion: {
@@ -155,6 +178,9 @@ export const themes: Record<ThemeId, Theme> = {
       "GELATO!",
     ],
     intro: "BELLO!",
+    divider: "stitch",
+    bullet: "🍌",
+    feel: { stiffness: 520, damping: 11, lift: -13, tilt: 10 },
   },
 };
 
