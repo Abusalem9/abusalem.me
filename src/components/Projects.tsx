@@ -58,13 +58,20 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const rotateX = useSpring(useTransform(py, [-0.5, 0.5], [theme.feel.tilt, -theme.feel.tilt]), spring);
   const rotateY = useSpring(useTransform(px, [-0.5, 0.5], [-theme.feel.tilt, theme.feel.tilt]), spring);
 
+  const rectRef = useRef<DOMRect | null>(null);
+
+  const onEnter = () => {
+    rectRef.current = ref.current?.getBoundingClientRect() ?? null;
+  };
+
   const onMove = (e: React.PointerEvent) => {
-    const r = ref.current?.getBoundingClientRect();
+    const r = rectRef.current ?? ref.current?.getBoundingClientRect();
     if (!r) return;
     px.set((e.clientX - r.left) / r.width - 0.5);
     py.set((e.clientY - r.top) / r.height - 0.5);
   };
   const onLeave = () => {
+    rectRef.current = null;
     px.set(0);
     py.set(0);
   };
@@ -77,6 +84,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       whileHover="hover"
       whileFocus="hover"
       viewport={{ once: true }}
+      onPointerEnter={onEnter}
       onPointerMove={onMove}
       onPointerLeave={onLeave}
       data-spidey

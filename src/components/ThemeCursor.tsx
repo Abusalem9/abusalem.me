@@ -78,18 +78,29 @@ export default function ThemeCursor() {
     let vx = 0;
     let vy = 0;
 
+    let lastCheck = 0;
     const onMove = (e: PointerEvent) => {
       target.x = e.clientX;
       target.y = e.clientY;
+      // Immediately set the head of the trail to raw pointer for instantaneous response
+      trail[0].x = e.clientX;
+      trail[0].y = e.clientY;
+
       if (!visible) {
         visible = true;
-        for (const p of trail) {
-          p.x = e.clientX;
-          p.y = e.clientY;
+        for (let i = 1; i < trail.length; i++) {
+          trail[i].x = e.clientX;
+          trail[i].y = e.clientY;
         }
       }
-      const el = e.target as Element | null;
-      hovering = !!el?.closest?.("a, button, input, textarea, [data-spidey]");
+
+      // Throttle expensive DOM element tree walk
+      const now = performance.now();
+      if (now - lastCheck > 60) {
+        lastCheck = now;
+        const el = e.target as Element | null;
+        hovering = !!el?.closest?.("a, button, input, textarea, [data-spidey]");
+      }
     };
     const onDown = (e: PointerEvent) => {
       bursts.push({ x: e.clientX, y: e.clientY, t: 0 });
@@ -354,15 +365,16 @@ export default function ThemeCursor() {
 
       const prevX = trail[0].x;
       const prevY = trail[0].y;
-      trail[0].x += (target.x - trail[0].x) * 0.38;
-      trail[0].y += (target.y - trail[0].y) * 0.38;
+      trail[0].x = target.x;
+      trail[0].y = target.y;
       vx = trail[0].x - prevX;
       vy = trail[0].y - prevY;
+
       for (let i = 1; i < trail.length; i++) {
-        trail[i].x += (trail[i - 1].x - trail[i].x) * 0.32;
-        trail[i].y += (trail[i - 1].y - trail[i].y) * 0.32;
+        trail[i].x += (trail[i - 1].x - trail[i].x) * 0.45;
+        trail[i].y += (trail[i - 1].y - trail[i].y) * 0.45;
       }
-      hot += ((hovering ? 1 : 0) - hot) * 0.16;
+      hot += ((hovering ? 1 : 0) - hot) * 0.25;
 
       if (mode === "web") drawWeb();
       else if (mode === "ink") drawInk();

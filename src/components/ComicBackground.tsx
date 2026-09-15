@@ -10,43 +10,20 @@ export default function ComicBackground() {
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll();
 
-  const redY = useTransform(scrollYProgress, [0, 1], ["0%", "35%"]);
-  const blueY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
-  const dotShift = useTransform(scrollYProgress, [0, 1], [0, -120]);
-  const hueFilter = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ["hue-rotate(0deg)", "hue-rotate(24deg)", "hue-rotate(-18deg)"],
-  );
+  const redY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const blueY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
+  const dotShift = useTransform(scrollYProgress, [0, 1], [0, -80]);
 
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden transform-gpu">
       {/* colour washes */}
       <motion.div
         style={reduced ? undefined : { y: redY }}
-        animate={
-          reduced
-            ? undefined
-            : {
-                scale: [1, 1.08, 0.96, 1],
-                opacity: [0.45, 0.65, 0.45],
-              }
-        }
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -left-1/5 -top-1/5 h-[85vh] w-[85vw] rounded-full bg-accent/55 blur-[120px]"
+        className="absolute -left-1/5 -top-1/5 h-[80vh] w-[80vw] rounded-full bg-accent/45 blur-[90px] will-change-transform"
       />
       <motion.div
         style={reduced ? undefined : { y: blueY }}
-        animate={
-          reduced
-            ? undefined
-            : {
-                scale: [1, 0.94, 1.1, 1],
-                opacity: [0.4, 0.6, 0.4],
-              }
-        }
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute -right-1/5 top-1/4 h-[85vh] w-[85vw] rounded-full bg-accent2/50 blur-[130px]"
+        className="absolute -right-1/5 top-1/4 h-[80vh] w-[80vw] rounded-full bg-accent2/40 blur-[100px] will-change-transform"
       />
 
       {/* Floating dynamic energy nodes */}
@@ -77,10 +54,10 @@ export default function ComicBackground() {
       <motion.div
         style={
           reduced
-            ? { opacity: 0.35 }
-            : { y: dotShift, filter: hueFilter, opacity: 0.35 }
+            ? { opacity: 0.3 }
+            : { y: dotShift, opacity: 0.3 }
         }
-        className="halftone absolute -inset-y-40 inset-x-0 mix-blend-screen"
+        className="halftone absolute -inset-y-40 inset-x-0 will-change-transform"
       />
 
       {/* vignette — kept light so the colour washes still read */}
