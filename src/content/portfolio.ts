@@ -29,9 +29,9 @@ export const hero = {
     "DISTRIBUTED SYSTEMS & AI",
   ],
   blurb:
-    "I was the first engineering hire at Twinleaves (Pallet), independently built 6 core services, " +
-    "and now lead backend development across 11 microservices. I build high-scale, fault-tolerant engines " +
-    "for catalog search, multi-tenant cart & tax, cloud printing, and production AI agents.",
+    "I was the first engineer to join Twinleaves (now Pallet). Back then, we had no backend — so I rolled up my sleeves, " +
+    "built our first 6 core services from scratch, and set up our cloud foundation. Today, I lead backend engineering across " +
+    "11 microservices, spending my days tuning search pipelines, building sub-20ms calculation engines, and making sure thousands of stores run without a hitch.",
   ctaPrimary: { label: "See my work", href: "#work" },
   ctaSecondary: { label: "Get in touch", href: "#contact" },
 };
@@ -49,18 +49,17 @@ export const heroCard = {
 export const about = {
   heading: "ORIGIN STORY",
   paragraphs: [
-    "I joined Twinleaves (Pallet) as its first engineering employee in 2022 after finishing " +
-      "Java Backend Development at Masai School. From day zero, I owned systems end to end — " +
-      "from architecture, database schemas, and networking to production deployments.",
-    "During the early growth phase, nothing existed yet. I built 6 core services from scratch — " +
-      "Cart, Catalog, Serviceability, Logistics, Communications, and Vendor Management — and established " +
-      "the company's cloud infrastructure on GCP from the ground up (VPC, Cloud Run, Cloud SQL, Cloud Build CI/CD).",
-    "Today, I lead backend development across 11 microservices. My daily focus spans high-throughput catalog " +
-      "engines handling 45K+ queries/min with p99 < 18ms, high-precision DAG tax calculations processing 100K+ " +
-      "requests/day under 20ms, low-latency cart engines serving 1,000+ stores, and production AI agents that " +
-      "slash merchant onboarding from hours to seconds.",
-    "Outside work, I love deep-diving into distributed system patterns, solving DSA challenges (700+ problems " +
-      "across LeetCode and competitive platforms), and building side projects like JobBeeper.",
+    "In September 2022, right after finishing intensive backend training at Masai School, I joined Twinleaves (now Pallet) as employee #1 in engineering. " +
+      "There was no existing codebase, no CI/CD pipelines, and no cloud setup — just a big roadmap and a whiteboard. " +
+      "I took total ownership from day one: drafting schemas, writing the API specs, wiring VPC networks on GCP, and pushing our very first commits to production.",
+    "During those early startup days, speed and durability went hand in hand. I built 6 of our foundational services from the ground up — " +
+      "Cart, Catalog, Serviceability, Logistics, Communications, and Vendor Management. I also set up our entire GCP infrastructure — Cloud Run, " +
+      "Cloud SQL, VPC networking, Cloud NAT, and automated build pipelines — ensuring we could scale rapidly without outgrowing our architecture.",
+    "Fast-forward to today: I lead a talented backend team maintaining 11 microservices. Most of my day is spent solving tricky engineering problems: " +
+      "optimizing an Elasticsearch catalog that handles 45,000+ queries every minute at under 18ms, writing a DAG tax calculation engine that crunch 100K+ daily orders " +
+      "with penny-level precision, keeping checkout latency under 112ms across 1,000+ stores, and shipping practical AI assistants that save merchants hours of manual cataloging.",
+    "When I step away from the terminal, I'm usually diving into distributed systems literature, grinding through complex DSA puzzles (700+ solved across LeetCode), " +
+      "or tinkering on side projects like JobBeeper — a tool I built to help job seekers get instant opening alerts across 25+ career boards.",
   ],
   stats: [
     { value: "4+", label: "Years Experience" },
@@ -163,11 +162,10 @@ export const projects: Project[] = [
     title: "CATALOG & DISCOVERY ENGINE",
     tagline: "1M+ products, 45K+ QPM, p99 < 18ms",
     description:
-      "Engineered a high-throughput catalog search and hierarchy engine backed by PostgreSQL and Elasticsearch. " +
-      "Built custom Elasticsearch query pipelines for multi-tenant product discovery, dynamic filtering, aggregations, " +
-      "and pricing with cache-friendly filter execution. Built a multi-level catalog sync engine that propagates master " +
-      "updates across hundreds of stores while preserving store-specific pricing and inventory overrides, plus a backend-driven " +
-      "CMS for real-time app layouts without new releases.",
+      "When your catalog exceeds 1 million products and merchants update stock in real time, basic database lookups break down. " +
+      "I engineered a dedicated catalog engine combining PostgreSQL with custom Elasticsearch query pipelines. It handles multi-tenant discovery, " +
+      "fuzzy search, and dynamic pricing with cache-friendly filter execution. I also designed a multi-level sync engine that automatically fans out updates " +
+      "across hundreds of franchise stores without overriding individual store prices, paired with a backend-driven CMS so the mobile app can change layouts on the fly.",
     tags: ["Java", "Spring Boot", "Elasticsearch", "PostgreSQL", "Multi-tenancy"],
     sfx: "THWIP!",
   },
@@ -175,10 +173,9 @@ export const projects: Project[] = [
     title: "TAX MASTER & DAG ENGINE",
     tagline: "100K+ calculations/day, p99 < 20ms",
     description:
-      "Built a zero-code-change configurable Tax Master supporting tax types, jurisdiction hierarchies, rules, rates, " +
-      "formulas, slabs, effective dates, and exemptions. Powered by a high-precision calculation engine processing 100K+ " +
-      "tax calculations daily with p99 latency under 20ms using DAG-based dependency execution, location/date-aware rule " +
-      "selection, cascading taxes, and penny-perfect rounding reconciliation.",
+      "Retail tax in multi-state commerce is full of tricky edge cases — state versus central rules, slabs, cess, cascading percentages, and rounding splits. " +
+      "Instead of hardcoding rules, I designed a zero-code-change Tax Master where finance teams configure rules, jurisdictions, and effective dates. " +
+      "Under the hood, a DAG (Directed Acyclic Graph) engine evaluates dependencies in parallel, computing penny-accurate taxes on 100,000+ daily orders in under 20ms.",
     tags: ["Java", "Spring Boot", "DAG Engine", "Tax & Billing", "PostgreSQL"],
     sfx: "BAM!",
   },
@@ -186,10 +183,9 @@ export const projects: Project[] = [
     title: "SHARED CART & PROMOTIONS",
     tagline: "1,000+ stores, 112ms latency, 5k-10k QPS",
     description:
-      "Built a shared cart service powering 1,000+ stores across POS, Restaurant, B2C, and B2B flows. Reduced add-to-cart " +
-      "latency from 2s to 112ms while supporting 5,000–10,000+ queries/sec with inventory and offer evaluation. Built a comprehensive " +
-      "promotion engine handling complex Buy-X-Get-Y, step offers, combos, and category/brand pooling that dynamically applies " +
-      "the optimal discount on every cart recalculation.",
+      "A customer adding an item to their cart expects an immediate response, but behind that click are inventory checks, tier pricing, and promo rules. " +
+      "I rebuilt our shared cart engine powering POS, Restaurant, and Consumer apps, slashing add-to-cart latency from 2 seconds down to 112ms under 10,000 queries/sec. " +
+      "I also built a rule-pooling promotion engine that evaluates complex Buy-X-Get-Y offers, bundles, and step discounts on every cart update.",
     tags: ["Java", "Spring Boot", "High-Throughput", "Promotions", "Redis"],
     sfx: "POW!",
   },
@@ -197,10 +193,9 @@ export const projects: Project[] = [
     title: "AI AGENTS & COMMONS",
     tagline: "70-90% onboarding time reduction + lock-free pool",
     description:
-      "Built chat-driven AI catalog and website builder agents that create products, categories, brands, visuals, and SEO " +
-      "with inline actions, slashing store setup and onboarding times by 70–90%. Authored shared platform libraries: a multi-tenant " +
-      "Spring Boot starter for RBAC and rate limiting, and an AI commons library featuring a custom lock-free CAS JDBC connection pool " +
-      "that cut token check latency to 5–11ms with async Pub/Sub billing events.",
+      "Onboarding a grocery merchant used to take days of tedious spreadsheet uploads. I built conversational AI catalog and store-builder agents " +
+      "that generate product catalogs, categories, banners, and SEO metadata directly through chat. To keep agent response times fast and economical, " +
+      "I authored an AI commons library featuring a custom lock-free CAS JDBC connection pool that shaved token verification latency down to 5–11ms.",
     tags: ["Vertex AI", "Spring Boot", "SSE", "Pub/Sub", "Lock-free JDBC"],
     sfx: "ZAP!",
   },
@@ -208,9 +203,9 @@ export const projects: Project[] = [
     title: "CLOUD PRINTER & JOB SYSTEM",
     tagline: "50K–80K print jobs/day across 400+ stores",
     description:
-      "Built a centralized job management system used across 400+ stores to assign, track, and manage job lifecycles in real time. " +
-      "Engineered the Cloud Printer Agent handling 50K–80K daily print jobs with real-time WebSocket delivery, automatic polling fallback, " +
-      "startup recovery, reprint tokens, and resilient Pub/Sub + Kafka event pipelines designed specifically for unstable shop-floor networks.",
+      "Shop floors and commercial kitchens have notoriously spotty Wi-Fi, yet billing receipts and Kitchen Order Tickets (KOT) can never be lost. " +
+      "I built a centralized job orchestration engine and lightweight Cloud Printer Agent that reliably handles 50K–80K daily print jobs. " +
+      "It uses duplex WebSockets with automatic HTTP polling fallback, startup spool recovery, and reprint tokens so no order is ever missed.",
     tags: ["WebSockets", "Kafka", "Pub/Sub", "POS", "Event-driven"],
     sfx: "KRAK!",
   },
@@ -218,9 +213,9 @@ export const projects: Project[] = [
     title: "JOBBEEPER",
     tagline: "Personal project · 25+ platforms, 2K+ active users",
     description:
-      "Built JobBeeper end to end to aggregate job openings across 25+ hiring platforms (LinkedIn, Naukri, Workday, Greenhouse, Lever, Ashby) " +
-      "into one place, delivering real-time personalized alerts via Telegram, Web Push, Email, and Android. Built the matching engine " +
-      "with deduplication and failure retries, running in production on Oracle Cloud with Docker, PostgreSQL, Nginx, and background workers.",
+      "Job searching is stressful when you have to refresh 20 different portals every day. I built JobBeeper to aggregate openings across 25+ major job boards " +
+      "(LinkedIn, Naukri, Workday, Greenhouse, Lever, Ashby) into a unified stream. It runs intelligent matching, deduplication, and retries, sending instant personalized alerts " +
+      "via Telegram, Web Push, and Android. It runs 24/7 on Oracle Cloud with Docker, PostgreSQL, Redis, and Celery workers.",
     tags: ["Python", "PostgreSQL", "Redis", "Docker", "Nginx"],
     href: "https://jobbeeper.com",
     sfx: "SNIKT!",
@@ -365,9 +360,9 @@ export const education = [
 export const contact = {
   heading: "SEND UP THE SIGNAL",
   blurb:
-    "If you've got a backend challenge worth chewing on — high-throughput catalog search, " +
-    "sub-20ms tax & pricing calculation, multi-tenant microservice architecture, or AI agents — " +
-    "my inbox is open.",
+    "Whether you're tackling high-throughput search, architecting low-latency transactional engines, " +
+    "or looking for a hands-on technical lead to take systems from zero to one — I'm always up for a good engineering conversation. " +
+    "Drop me an email or find me on the channels below.",
   email: "mail@abusalem.me",
   location: "Bengaluru, India",
   socials: [
