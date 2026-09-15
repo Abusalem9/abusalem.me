@@ -15,7 +15,7 @@ export default function Contact() {
     <Section id="contact" className="overflow-hidden">
       <Ornament corner="tr" size={320} className="text-accent/20" />
 
-      <SectionHeading kicker={`${theme.kicker} 06`} sfx={theme.sfx.contact}>
+      <SectionHeading kicker={`${theme.kicker} 07`} sfx={theme.sfx.contact}>
         {theme.headings.contact}
       </SectionHeading>
 

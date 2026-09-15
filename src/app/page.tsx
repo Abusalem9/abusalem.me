@@ -10,6 +10,7 @@ import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import ThemeCursor from "@/components/ThemeCursor";
+import Timeline from "@/components/Timeline";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <Projects />
         <Experience />
         <Feats />
+        <Timeline />
         <Contact />
       </main>
     </>

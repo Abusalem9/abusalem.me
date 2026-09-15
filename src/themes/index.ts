@@ -71,6 +71,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "THE WORK",
       experience: "THE HISTORY",
       feats: "THE FEATS",
+      timeline: "THE TIMELINE",
       contact: "SEND UP THE SIGNAL",
     },
     navLabels: {
@@ -79,6 +80,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "Work",
       experience: "History",
       feats: "Feats",
+      timeline: "Timeline",
       contact: "Contact",
     },
     sfx: {
@@ -87,6 +89,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "THWIP!",
       experience: "BAM!",
       feats: "KAPOW!",
+      timeline: "CHRONO!",
       contact: "ZAP!",
     },
     projectSfx: ["THWIP!", "POW!", "BAM!", "ZAP!", "KRAK!", "SNIKT!"],
@@ -111,6 +114,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "THE WORK",
       experience: "THE PATH",
       feats: "THE FEATS",
+      timeline: "CHRONICLES OF WORK",
       contact: "SEND A MESSENGER",
     },
     navLabels: {
@@ -119,6 +123,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "Work",
       experience: "Path",
       feats: "Feats",
+      timeline: "Chronicles",
       contact: "Message",
     },
     sfx: {
@@ -127,6 +132,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "SKADOOSH!",
       experience: "THE PATH!",
       feats: "WUXI!",
+      timeline: "LEGEND!",
       contact: "SPEAK!",
     },
     projectSfx: ["SKADOOSH!", "HIYAA!", "WHATAA!", "KI-YAH!", "WUXI!", "SHIFU!"],
@@ -151,6 +157,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "STUFF ME MADE",
       experience: "WHERE ME WORKED",
       feats: "BIG WINS",
+      timeline: "WHAT ME DID EACH WEEK",
       contact: "TALK TO ME",
     },
     navLabels: {
@@ -159,6 +166,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "Stuff",
       experience: "Jobs",
       feats: "Wins",
+      timeline: "Weekly",
       contact: "Talk",
     },
     sfx: {
@@ -167,6 +175,7 @@ export const themes: Record<ThemeId, Theme> = {
       work: "TULALILOO!",
       experience: "POOPAYE!",
       feats: "BEE-DO!",
+      timeline: "TICK-TOCK!",
       contact: "TANK YU!",
     },
     projectSfx: [

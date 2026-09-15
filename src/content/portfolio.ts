@@ -11,10 +11,10 @@
 
 export const site = {
   name: "Abusalem M",
-  title: "Abusalem M — Backend Engineer & Technical Lead",
+  title: "Abusalem M — Backend Software Engineer & Technical Lead",
   description:
-    "Backend engineer in Bengaluru. Java and Spring Boot, mostly — catalogs, " +
-    "tax, billing, and the systems that fall over if you get them wrong.",
+    "Backend Software Engineer with 4+ years of experience owning high-scale systems end to end. " +
+    "First engineering hire at Pallet, leading 11 microservices across Java, Spring Boot, PostgreSQL, Elasticsearch, and GCP.",
   url: "https://abusalem.me",
 };
 
@@ -26,11 +26,12 @@ export const hero = {
     "BACKEND SOFTWARE ENGINEER",
     "TECHNICAL LEAD",
     "JAVA · SPRING BOOT · GCP",
+    "DISTRIBUTED SYSTEMS & AI",
   ],
   blurb:
-    "I was the first engineer at Pallet. Four years later I lead the backend " +
-    "team and still write code most days — mostly Java, mostly the unglamorous " +
-    "parts that everything else depends on.",
+    "I was the first engineering hire at Twinleaves (Pallet), independently built 6 core services, " +
+    "and now lead backend development across 11 microservices. I build high-scale, fault-tolerant engines " +
+    "for catalog search, multi-tenant cart & tax, cloud printing, and production AI agents.",
   ctaPrimary: { label: "See my work", href: "#work" },
   ctaSecondary: { label: "Get in touch", href: "#contact" },
 };
@@ -38,36 +39,34 @@ export const hero = {
 /** The card that hangs beside the hero on wide screens. */
 export const heroCard = {
   label: "Currently",
-  role: "Technical Lead",
+  role: "SDE 2 & Backend Lead",
   company: "Pallet",
   location: "Bengaluru, India",
-  stack: ["Java", "Spring Boot", "GCP", "Elasticsearch"],
-  footnote: "Backend team of six",
+  stack: ["Java", "Spring Boot", "Elasticsearch", "GCP", "PostgreSQL"],
+  footnote: "Leading 11 microservices",
 };
 
 export const about = {
   heading: "ORIGIN STORY",
   paragraphs: [
-    "I finished a Java backend course at Masai in 2022 and joined a startup " +
-      "called Twinleaves as its first engineer. It's called Pallet now. I'm " +
-      "still here.",
-    "For the first couple of years nothing existed yet. I built cart, catalog, " +
-      "serviceability, logistics, comms and vendor management from empty repos, " +
-      "and set up most of the GCP infrastructure underneath them — largely by " +
-      "reading docs at night and getting it wrong a few times first.",
-    "Now I lead the backend side of a six-person team. In practice that means I " +
-      "write the specs everyone builds against, review a lot of pull requests, " +
-      "and keep the parts I'd rather not hand off: data models, API contracts, " +
-      "migrations. If something's going to break production, I'd prefer to be " +
-      "the one who broke it.",
-    // Add a line about yourself outside work here — it's the one thing neither
-    // your resume nor your commits could tell me. Something like:
-    // "Outside work I'm usually ___."
+    "I joined Twinleaves (Pallet) as its first engineering employee in 2022 after finishing " +
+      "Java Backend Development at Masai School. From day zero, I owned systems end to end — " +
+      "from architecture, database schemas, and networking to production deployments.",
+    "During the early growth phase, nothing existed yet. I built 6 core services from scratch — " +
+      "Cart, Catalog, Serviceability, Logistics, Communications, and Vendor Management — and established " +
+      "the company's cloud infrastructure on GCP from the ground up (VPC, Cloud Run, Cloud SQL, Cloud Build CI/CD).",
+    "Today, I lead backend development across 11 microservices. My daily focus spans high-throughput catalog " +
+      "engines handling 45K+ queries/min with p99 < 18ms, high-precision DAG tax calculations processing 100K+ " +
+      "requests/day under 20ms, low-latency cart engines serving 1,000+ stores, and production AI agents that " +
+      "slash merchant onboarding from hours to seconds.",
+    "Outside work, I love deep-diving into distributed system patterns, solving DSA challenges (700+ problems " +
+      "across LeetCode and competitive platforms), and building side projects like JobBeeper.",
   ],
   stats: [
-    { value: "4", label: "Years at Pallet" },
-    { value: "30+", label: "Repos shipped" },
-    { value: "6", label: "Engineers led" },
+    { value: "4+", label: "Years Experience" },
+    { value: "11", label: "Microservices Led" },
+    { value: "1M+", label: "Catalog Products" },
+    { value: "1,000+", label: "Stores Powered" },
   ],
 };
 
@@ -76,12 +75,12 @@ export const about = {
  * `level` is 0–100 — these are my read of your history, tune to taste.
  */
 export const skills = [
-  { name: "Java / Spring Boot", level: 95 },
-  { name: "System Design", level: 88 },
-  { name: "PostgreSQL / JPA", level: 87 },
-  { name: "Elasticsearch", level: 85 },
-  { name: "GCP / Cloud Run", level: 82 },
-  { name: "Event-Driven Systems", level: 80 },
+  { name: "Java / Spring Boot", level: 96 },
+  { name: "Distributed Systems & Architecture", level: 92 },
+  { name: "Elasticsearch & Search Pipelines", level: 90 },
+  { name: "PostgreSQL / PostGIS / JPA", level: 90 },
+  { name: "GCP Cloud Infrastructure & CI/CD", level: 88 },
+  { name: "Event-Driven Systems & AI Agents", level: 86 },
 ];
 
 /** The full kit, grouped. */
@@ -103,34 +102,47 @@ export const skillGroups = [
   },
   {
     label: "Data",
-    items: ["PostgreSQL", "MySQL", "Elasticsearch", "BigQuery", "Redis"],
+    items: [
+      "PostgreSQL",
+      "PostGIS",
+      "MySQL",
+      "Elasticsearch",
+      "Redis",
+      "BigQuery",
+    ],
   },
   {
     label: "Cloud & Messaging",
     items: [
-      "GCP",
-      "Cloud Run",
+      "GCP (Cloud Run, Cloud Build, IAM, VPC)",
+      "AWS",
       "Pub/Sub",
-      "Firebase",
       "Kafka",
+      "Firebase",
       "WebSockets",
       "SSE",
-      "AWS",
     ],
   },
   {
-    label: "DevOps",
-    items: ["Docker", "Jenkins", "GitHub Actions", "Kubernetes", "Git"],
+    label: "DevOps & Tools",
+    items: [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "GitHub Actions",
+      "Git",
+    ],
   },
   {
-    label: "Architecture",
+    label: "Architecture & Design",
     items: [
       "Multi-tenancy",
       "RBAC",
-      "Event-driven",
-      "System design",
+      "Event-driven Systems",
+      "DAG Engines",
       "Caching",
       "Observability",
+      "Lock-free Concurrency",
     ],
   },
 ];
@@ -148,85 +160,69 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "CATALOG PLATFORM",
-    tagline: "The thing I've spent the most time on",
+    title: "CATALOG & DISCOVERY ENGINE",
+    tagline: "1M+ products, 45K+ QPM, p99 < 18ms",
     description:
-      "Retail chains are nested: an account owns brands, brands own head " +
-      "offices, head offices own stores. The old system faked that with " +
-      "hard-coded inheritance. I replaced it with five real levels, where a " +
-      "product is created once at the top and shared down. When a store edits " +
-      "one, it forks — and you can diff that fork against its parent, pull " +
-      "single fields back, or undo it entirely. The hard part was the read path: " +
-      "collapsing masters and forks into one row per product without making " +
-      "search slow.",
-    tags: ["Java", "Spring Boot", "Elasticsearch", "Multi-tenancy"],
+      "Engineered a high-throughput catalog search and hierarchy engine backed by PostgreSQL and Elasticsearch. " +
+      "Built custom Elasticsearch query pipelines for multi-tenant product discovery, dynamic filtering, aggregations, " +
+      "and pricing with cache-friendly filter execution. Built a multi-level catalog sync engine that propagates master " +
+      "updates across hundreds of stores while preserving store-specific pricing and inventory overrides, plus a backend-driven " +
+      "CMS for real-time app layouts without new releases.",
+    tags: ["Java", "Spring Boot", "Elasticsearch", "PostgreSQL", "Multi-tenancy"],
     sfx: "THWIP!",
   },
   {
-    title: "JOBBEEPER",
-    tagline: "Mine. Built it, run it, pay for the server.",
+    title: "TAX MASTER & DAG ENGINE",
+    tagline: "100K+ calculations/day, p99 < 20ms",
     description:
-      "A job-alert service I built and operate on my own. It watches LinkedIn, " +
-      "Naukri, Workday, Greenhouse, Lever, Ashby and a few others across 2,000+ " +
-      "companies, matches new postings against what each person actually wants, " +
-      "and pings them on Telegram, browser push or email. It all runs on one " +
-      "Oracle Cloud ARM box. Started as a scraper for myself; it now has " +
-      "accounts, subscriptions, referrals and an admin panel.",
-    tags: ["Java", "Python", "PostgreSQL", "Docker", "Nginx"],
-    href: "https://jobbeeper.com",
-    sfx: "POW!",
-  },
-  {
-    title: "TAX & PROMOTIONS",
-    tagline: "Every bill goes through these two",
-    description:
-      "The tax engine works out the right rate for every line item at billing " +
-      "time. I wrote 185 tests for it, because getting tax wrong across four " +
-      "countries isn't the kind of bug you hear about politely. The promotion " +
-      "engine covers eight offer types, including the awkward ones: " +
-      "buy-X-get-Y, combos, and splitting a discount fairly across loose items " +
-      "sold by weight.",
-    tags: ["Java", "Spring Boot", "Billing", "Test Coverage"],
+      "Built a zero-code-change configurable Tax Master supporting tax types, jurisdiction hierarchies, rules, rates, " +
+      "formulas, slabs, effective dates, and exemptions. Powered by a high-precision calculation engine processing 100K+ " +
+      "tax calculations daily with p99 latency under 20ms using DAG-based dependency execution, location/date-aware rule " +
+      "selection, cascading taxes, and penny-perfect rounding reconciliation.",
+    tags: ["Java", "Spring Boot", "DAG Engine", "Tax & Billing", "PostgreSQL"],
     sfx: "BAM!",
   },
   {
-    title: "PRODUCT AI AGENTS",
-    tagline: "Scan it, photograph it, or just describe it",
+    title: "SHARED CART & PROMOTIONS",
+    tagline: "1,000+ stores, 112ms latency, 5k-10k QPS",
     description:
-      "Point a phone at a barcode, send a photo, or type what the thing is — " +
-      "the agent turns it into a product draft you can check and save. It looks " +
-      "for a real product image on the web first and falls back to your photo. " +
-      "Most of my time went into the streaming rather than the model: bounding " +
-      "the executors, refusing cleanly when we're at capacity, cancelling when " +
-      "someone closes the tab, and clearing up tool calls left hanging by an " +
-      "interrupted session.",
-    tags: ["MCP", "Vertex AI", "SSE", "Spring Boot"],
+      "Built a shared cart service powering 1,000+ stores across POS, Restaurant, B2C, and B2B flows. Reduced add-to-cart " +
+      "latency from 2s to 112ms while supporting 5,000–10,000+ queries/sec with inventory and offer evaluation. Built a comprehensive " +
+      "promotion engine handling complex Buy-X-Get-Y, step offers, combos, and category/brand pooling that dynamically applies " +
+      "the optimal discount on every cart recalculation.",
+    tags: ["Java", "Spring Boot", "High-Throughput", "Promotions", "Redis"],
+    sfx: "POW!",
+  },
+  {
+    title: "AI AGENTS & COMMONS",
+    tagline: "70-90% onboarding time reduction + lock-free pool",
+    description:
+      "Built chat-driven AI catalog and website builder agents that create products, categories, brands, visuals, and SEO " +
+      "with inline actions, slashing store setup and onboarding times by 70–90%. Authored shared platform libraries: a multi-tenant " +
+      "Spring Boot starter for RBAC and rate limiting, and an AI commons library featuring a custom lock-free CAS JDBC connection pool " +
+      "that cut token check latency to 5–11ms with async Pub/Sub billing events.",
+    tags: ["Vertex AI", "Spring Boot", "SSE", "Pub/Sub", "Lock-free JDBC"],
     sfx: "ZAP!",
   },
   {
-    title: "PRINTING PIPELINE",
-    tagline: "Boring until it stops working, then it's everything",
+    title: "CLOUD PRINTER & JOB SYSTEM",
+    tagline: "50K–80K print jobs/day across 400+ stores",
     description:
-      "Receipts and kitchen tickets have to come out of the printer or the " +
-      "store stops. This wires printer agents, POS services and the gateway " +
-      "together over WebSockets, with deferred prints for when a printer is " +
-      "offline, reprint tokens, recovery on startup, and a sound alert when " +
-      "something needs a person. Built for a shop floor, where the network is " +
-      "bad and printers vanish mid-job.",
-    tags: ["WebSockets", "Event-driven", "POS", "Java"],
+      "Built a centralized job management system used across 400+ stores to assign, track, and manage job lifecycles in real time. " +
+      "Engineered the Cloud Printer Agent handling 50K–80K daily print jobs with real-time WebSocket delivery, automatic polling fallback, " +
+      "startup recovery, reprint tokens, and resilient Pub/Sub + Kafka event pipelines designed specifically for unstable shop-floor networks.",
+    tags: ["WebSockets", "Kafka", "Pub/Sub", "POS", "Event-driven"],
     sfx: "KRAK!",
   },
   {
-    title: "AUTH STARTER",
-    tagline: "One library, so the same bug stops coming back",
+    title: "JOBBEEPER",
+    tagline: "Personal project · 25+ platforms, 2K+ active users",
     description:
-      "Every service was doing its own thing with roles and permissions, so the " +
-      "same handful of bugs kept reappearing in different places. I pulled it " +
-      "all into one Spring Boot starter — roles, plans, permissions, tenant and " +
-      "platform access — and most of the platform runs on it now. Auth bugs " +
-      "dropped by roughly 40%, and request logging finally looks the same " +
-      "everywhere.",
-    tags: ["Spring Boot", "Spring Security", "RBAC", "Library"],
+      "Built JobBeeper end to end to aggregate job openings across 25+ hiring platforms (LinkedIn, Naukri, Workday, Greenhouse, Lever, Ashby) " +
+      "into one place, delivering real-time personalized alerts via Telegram, Web Push, Email, and Android. Built the matching engine " +
+      "with deduplication and failure retries, running in production on Oracle Cloud with Docker, PostgreSQL, Nginx, and background workers.",
+    tags: ["Python", "PostgreSQL", "Redis", "Docker", "Nginx"],
+    href: "https://jobbeeper.com",
     sfx: "SNIKT!",
   },
 ];
@@ -248,8 +244,8 @@ export type Job = {
 
 export const experience: Job[] = [
   {
-    company: "Pallet",
-    note: "formerly Twinleaves · first engineering hire",
+    company: "Twinleaves (Pallet)",
+    note: "first engineering employee · grew platform from 0 to 11 microservices",
     period: "Sep 2022 — Present",
     location: "Bengaluru, India",
     roles: [
@@ -257,45 +253,27 @@ export const experience: Job[] = [
         title: "Software Development Engineer 2",
         period: "May 2024 — Present",
         points: [
-          "Lead the backend side of a six-person team: split requirements into " +
-            "per-service work, review the code, unstick integrations when two " +
-            "services disagree, and run releases across 11 repos.",
-          "Write the specs and integration guides everyone builds from, and keep " +
-            "the risky work myself — data models, API contracts, migrations.",
-          "Designed the five-level catalog hierarchy and everything around it: " +
-            "forking, field-by-field re-sync, un-forking, and a read path that " +
-            "collapses masters and forks into one result per product.",
-          "Built the tax engine that prices every transaction, with 185 tests " +
-            "covering four countries' rules.",
-          "Ran the team's work on the promotion engine and its eight offer types, " +
-            "and own cart and billing for both retail and restaurant.",
-          "Pulled authorization into a shared Spring Boot starter that most " +
-            "services now use. Auth bugs dropped by about 40%.",
-          "Shipped the event-driven printing pipeline, and stabilised the SSE " +
-            "streaming the AI agents run on.",
-          "Run services on Cloud Run and Compute Engine. Jenkins and Cloud Build " +
-            "took roughly 30% off deploy time.",
-          "Handle most production incidents — auth failures, wrong calculations, " +
-            "Elasticsearch filter bugs, duplicate records. One empty-PDF bug " +
-            "turned out to be an entity-manager lifecycle problem and took me " +
-            "embarrassingly long to find.",
+          "Catalog & Discovery: Engineered high-throughput catalog search and hierarchy engine (PostgreSQL + Elasticsearch) for 1M+ products, handling 45K+ queries/min with p99 search latency under 18ms.",
+          "Elasticsearch Pipelines: Built custom Elasticsearch query pipelines for multi-tenant product discovery, dynamic filtering, aggregations, and pricing with cache-friendly filter execution and query optimization.",
+          "Catalog Synchronization: Built a multi-level catalog sync engine that propagates master product changes across hundreds of stores while preserving store-specific pricing and inventory overrides.",
+          "Backend-Driven Content: Designed and built a backend-driven app content system to manage pages, layouts, and campaigns with scheduled festival and promotion updates without requiring new client releases.",
+          "Tax Master & DAG Engine: Built a configurable Tax Master (jurisdictions, rules, rates, slabs, exemptions) and a high-precision DAG-based tax calculation engine processing 100K+ calculations/day with p99 latency under 20ms and rounding reconciliation.",
+          "Cart & Promotions: Built a shared cart service across 1,000+ stores for POS, Restaurant, B2C, and B2B flows. Reduced add-to-cart latency from 2s to 112ms under 5k–10k+ QPS, and built a promotion engine for Buy-X-Get-Y, step offers, combos, and category pooling.",
+          "AI Agents: Built AI catalog and website builder agents that manage products, SEO, layouts, and styling through chat with inline actions, slashing store setup and onboarding times by 70–90%.",
+          "Platform & AI Commons: Built a shared Spring Boot platform library for multi-tenant auth, RBAC, and rate limiting; built an AI commons library with a lock-free CAS JDBC connection pool achieving sub-millisecond borrow latency and reducing AI token checks to 5–11ms.",
+          "Job Management & Cloud Printing: Built a centralized Job System and Cloud Printer Agent processing 50K–80K print jobs/day across 400+ stores using WebSockets, polling fallback, and Pub/Sub + Kafka event streams.",
+          "Serviceability & Logistics: Built a configurable serviceability service across 1,000+ stores for instant, same-day, and slotted delivery using PostGIS for geo-radius and delivery-time calculation under 45ms.",
+          "Cloud & Infrastructure: Managed production GCP infrastructure across 110+ Cloud Run services, 10+ Compute Engine instances, 10+ Cloud SQL instances, 170+ Artifact Registry repos, 140+ Cloud Build triggers, 70+ Pub/Sub topics, and end-to-end VPC networking.",
+          "Technical Leadership: Lead 3 backend engineers across 11 microservices (specs, PR reviews, releases); previously led a 14-member cross-functional team (backend, frontend, QA) for Pallet Restaurant across RMS, POS, B2C, B2B, and Zomato/Swiggy integrations.",
         ],
       },
       {
         title: "Software Development Engineer 1",
         period: "Sep 2022 — May 2024",
         points: [
-          "Built six of the company's core services while it was still finding " +
-            "its feet — cart, catalog, serviceability, logistics, comms, vendor " +
-            "management — and worked on ten or so more.",
-          "Cut API response times by nearly 40%: profiled the slow endpoints, " +
-            "added Redis caching, then fixed the queries, indexes and pagination " +
-            "underneath them.",
-          "Integrated WhatsApp Business, GS1 Datakart, Firebase and Vertex AI, " +
-            "and built offline inventory sync for POS terminals in stores where " +
-            "the internet comes and goes.",
-          "Set up much of the early GCP infrastructure — VPC, Compute Engine, " +
-            "Cloud Run, IAM, load balancing — which took about 15% off the bill.",
+          "Core Services: Joined as the first engineering hire and independently built 6 core services from scratch: Cart, Catalog, Serviceability, Logistics, Communications, and Vendor Management, while contributing to 10+ others.",
+          "Integrations & Offline POS: Integrated WhatsApp Business, GS1 Datakart, Firebase, and Vertex AI; engineered offline POS inventory synchronization to maintain uninterrupted store operations during network outages.",
+          "GCP Foundation: Set up the company's entire GCP cloud infrastructure from the ground up, including Cloud Run, Cloud SQL, VPC networks, subnets, firewalls, Cloud NAT, load balancers, Docker, and Cloud Build CI/CD.",
         ],
       },
     ],
@@ -304,30 +282,29 @@ export const experience: Job[] = [
 
 /** The "Feats" band — numbers worth stating plainly. */
 export const feats = [
-  { value: "185", label: "Tax tests", detail: "Four countries' rules" },
-  { value: "40%", label: "Fewer auth bugs", detail: "One shared starter" },
-  { value: "40%", label: "Faster APIs", detail: "Profiling, caching, indexes" },
-  { value: "30%", label: "Faster deploys", detail: "Jenkins + Cloud Build" },
-  { value: "15%", label: "Off the cloud bill", detail: "Early GCP setup" },
-  { value: "2,000+", label: "Companies watched", detail: "JobBeeper scrapers" },
+  { value: "112ms", label: "Add-to-cart latency", detail: "Reduced from 2s under 10k QPS" },
+  { value: "< 18ms", label: "p99 search latency", detail: "1M+ products, 45K+ QPM" },
+  { value: "100K+", label: "Daily tax calculations", detail: "DAG engine with p99 < 20ms" },
+  { value: "1,000+", label: "Stores powered", detail: "POS, Restaurant, B2C & B2B" },
+  { value: "50K–80K", label: "Daily print jobs", detail: "Cloud Printer Agent across 400+ stores" },
+  { value: "110+", label: "Cloud Run services", detail: "Production GCP microservices managed" },
 ];
 
 export const achievements = [
   {
     title: "Employee of the Quarter",
     detail:
-      "Twinleaves / Pallet, 2025. I was the first engineer they hired, and the " +
-      "team I now lead runs the services I started.",
+      "Awarded every quarter since December 2022 at Twinleaves (Pallet). Joined as the first engineering employee and now lead backend development across 11 microservices.",
   },
   {
-    title: "700+ DSA problems",
-    detail: "Across a few platforms. I still turn up for LeetCode contests.",
+    title: "700+ DSA Problems Solved",
+    detail: "Solved 700+ data structures and algorithms problems across LeetCode and other competitive programming platforms.",
   },
 ];
 
 export const education = [
   {
-    title: "Certification in Java Backend Development",
+    title: "Java Backend Development",
     place: "Masai School, Bengaluru",
     period: "Dec 2021 — Aug 2022",
   },
@@ -341,8 +318,8 @@ export const education = [
 export const contact = {
   heading: "SEND UP THE SIGNAL",
   blurb:
-    "If you've got a backend problem worth chewing on — or you just want to " +
-    "argue about catalog modelling, tax rules, or why printers are the worst — " +
+    "If you've got a backend challenge worth chewing on — high-throughput catalog search, " +
+    "sub-20ms tax & pricing calculation, multi-tenant microservice architecture, or AI agents — " +
     "my inbox is open.",
   email: "mail@abusalem.me",
   location: "Bengaluru, India",
@@ -350,7 +327,7 @@ export const contact = {
     { label: "GitHub", href: "https://github.com/Abusalem9" },
     { label: "LinkedIn", href: "https://linkedin.com/in/abusalemm" },
     { label: "LeetCode", href: "https://leetcode.com/u/Abusalem" },
-    { label: "Resume", href: "/resume.pdf" },
+    { label: "Resume", href: "/resume" },
   ],
 };
 
@@ -360,5 +337,6 @@ export const nav = [
   { label: "Work", href: "#work" },
   { label: "History", href: "#experience" },
   { label: "Feats", href: "#feats" },
+  { label: "Timeline", href: "#timeline" },
   { label: "Contact", href: "#contact" },
 ];

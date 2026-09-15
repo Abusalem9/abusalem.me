@@ -1,0 +1,2766 @@
+[
+  {
+    "year": 2026,
+    "week": 37,
+    "dateRange": "07 Sep 2026",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Handled same-category and same-brand Buy X Get Y offers across individual products and pooled leftovers",
+      "Rejected offers when the threshold was nonpositive or the cart quantity was below it"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 36,
+    "dateRange": "31 Aug 2026 – 02 Sep 2026",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Calculated flat-price discounts using the number of eligible bundles instead of multiplying the flat price by quantity",
+      "Changed the Docker builder to assemble the application without running verification tasks"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 35,
+    "dateRange": "25 Aug 2026 – 28 Aug 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Aligned governed write and approval flows with consistent replay, transaction, and response handling",
+      "Updated product filtering to match governance values stored as either direct fields or keyword subfields"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 34,
+    "dateRange": "17 Aug 2026 – 19 Aug 2026",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Corrected legacy date-window upper bounds and made the Elasticsearch sequence seed use the largest available legacy numeric identifier",
+      "Renamed routing and approval types to reflect their actual responsibilities and synchronized PME structure documentation"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 33,
+    "dateRange": "12 Aug 2026 – 13 Aug 2026",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Design spec for grocery bulk upload variants and restaurant variant fixes",
+      "Make apply/merges the whole merge pipeline and self-approve what qualified"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 32,
+    "dateRange": "03 Aug 2026 – 06 Aug 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Pme: the three backfill controllers become one, and take a landmine with them",
+      "Pme: cross-level product filter — the v2 contract answered at every level"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 31,
+    "dateRange": "27 Jul 2026 – 31 Jul 2026",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Merchant Web UI"
+    ],
+    "accomplishments": [
+      "Pme G3: the whole rollout rehearsed on a copy of RET_82, and the readiness count that could never reach zero",
+      "Pme C3: the name cascade wrote every vertical into grocery, and stamped ids on sites that never matched"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 30,
+    "dateRange": "20 Jul 2026 – 21 Jul 2026",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Default the HO tier to the org node when no group id is known",
+      "Make chains account-optional and preserve explicit ho/brand ids"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 29,
+    "dateRange": "13 Jul 2026 – 17 Jul 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Restaurant System"
+    ],
+    "accomplishments": [
+      "Resolve governance account via creation-context; gated-save lands on approvals",
+      "Account-scoped assignment uniqueness; approval dedupe and product-id backfill"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 28,
+    "dateRange": "08 Jul 2026 – 10 Jul 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Mobile RMS"
+    ],
+    "accomplishments": [
+      "Remove canEdit gate; edit permission now via override fork",
+      "Add canEdit policy flag to gate product edits"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 27,
+    "dateRange": "29 Jun 2026 – 03 Jul 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Comms Agent",
+      "Pallet Mcp Service"
+    ],
+    "accomplishments": [
+      "Restore blue gradient user bubbles and purple Deep Analysis active state",
+      "Send x-org-id and x-location-id headers on chat-stream calls"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 26,
+    "dateRange": "22 Jun 2026 – 28 Jun 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Comms Agent",
+      "Pallet Mcp Service"
+    ],
+    "accomplishments": [
+      "Keep source_type as routing-only, do not forward into CMS payload",
+      "Live draft preview card in chat with Save/Edit/Discard"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 23,
+    "dateRange": "01 Jun 2026 – 05 Jun 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Mobile RMS"
+    ],
+    "accomplishments": [
+      "Product Module integration added",
+      "Restore Windows platform packages and fix type/style issues across mobile and sandbox"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 22,
+    "dateRange": "27 May 2026",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Pallet Highway"
+    ],
+    "accomplishments": [
+      "Cors changes + comms agent config added",
+      "Sending header removed"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 21,
+    "dateRange": "21 May 2026",
+    "title": "Core Platform Architecture for Pallet Highway",
+    "domains": [
+      "Pallet Highway"
+    ],
+    "accomplishments": [
+      "Cors changes as per global config & service reach removed"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 20,
+    "dateRange": "11 May 2026 – 15 May 2026",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Comms Agent"
+    ],
+    "accomplishments": [
+      "Dockerfile changes & context path added",
+      "Tenant data added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 19,
+    "dateRange": "04 May 2026 – 06 May 2026",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Comms Agent",
+      "Pallet Mcp Service"
+    ],
+    "accomplishments": [
+      "Tax Engine Id generation logic updated",
+      "When exception occurs null value passed to bool query"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 18,
+    "dateRange": "28 Apr 2026 – 30 Apr 2026",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Mrms"
+    ],
+    "accomplishments": [
+      "When exception occurs null value passed to bool query",
+      "Removed unused files & code"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 17,
+    "dateRange": "20 Apr 2026 – 23 Apr 2026",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Two more fields added for selling Price in CartBillingEntity.java & some calculation corrections",
+      "Tax engine code base - filter api's"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 16,
+    "dateRange": "14 Apr 2026 – 17 Apr 2026",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "POS Service",
+      "Restaurant System",
+      "Pallet Tax Engine"
+    ],
+    "accomplishments": [
+      "Printer printable job query changes -> not printing PENDING jobs",
+      "Tax-Master changes added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 15,
+    "dateRange": "08 Apr 2026 – 10 Apr 2026",
+    "title": "Cloud Printer Agent & WebSocket Store Pipeline",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Comms",
+      "Cloud Printer Agent"
+    ],
+    "accomplishments": [
+      "Scope Implementation added",
+      "Websocket based printing added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 14,
+    "dateRange": "30 Mar 2026 – 02 Apr 2026",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cloud Printer Agent"
+    ],
+    "accomplishments": [
+      "Null check added",
+      "Sound playing in loop added until pause trigger"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 13,
+    "dateRange": "24 Mar 2026 – 26 Mar 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Identity Verification",
+      "Web Pos Playwrite Automation"
+    ],
+    "accomplishments": [
+      "Grocery Product enhancement using AI",
+      "Ho Implementation for product added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 12,
+    "dateRange": "16 Mar 2026 – 18 Mar 2026",
+    "title": "Core Platform Architecture for Cart & Promotions",
+    "domains": [
+      "Cart & Promotions",
+      "POS Service",
+      "Cloud Printer Agent"
+    ],
+    "accomplishments": [
+      "Intial code base",
+      "Coupon reapply logic changes added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 10,
+    "dateRange": "04 Mar 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Ho & Rise Level product creation added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 9,
+    "dateRange": "25 Feb 2026 – 27 Feb 2026",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Tax calculation related checks & precision removed",
+      "Copy Manufacturer & Category related changes added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 8,
+    "dateRange": "16 Feb 2026 – 19 Feb 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet_Business"
+    ],
+    "accomplishments": [
+      "ExternalVariantMetadata.java -> cms related variant changes added",
+      "Mis-configuration of db removed"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 7,
+    "dateRange": "10 Feb 2026 – 12 Feb 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Cloud Printer Agent"
+    ],
+    "accomplishments": [
+      "Category channel mapping & External Product Mapping Design added",
+      "Temporary Region shipping charges update api added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 6,
+    "dateRange": "02 Feb 2026 – 06 Feb 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Addon Sorting changes added",
+      "Job status completed added in differed api"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 5,
+    "dateRange": "27 Jan 2026 – 30 Jan 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Get Product By Barcode added",
+      "Changes added -> default printer , reprint, agent-status"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 4,
+    "dateRange": "19 Jan 2026 – 22 Jan 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Cloud Printer Agent"
+    ],
+    "accomplishments": [
+      "Changes added for variantId & item availabilities",
+      "Out of stock -> added in Aggregated view"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 3,
+    "dateRange": "12 Jan 2026 – 17 Jan 2026",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Printer Config Related changes added",
+      "Sub Task related code added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 2,
+    "dateRange": "05 Jan 2026 – 09 Jan 2026",
+    "title": "Cloud Printer Agent & WebSocket Store Pipeline",
+    "domains": [
+      "Cart & Promotions",
+      "Pallet Highway",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Printing related changes added",
+      "New Wi-Fi Printer Config added"
+    ]
+  },
+  {
+    "year": 2026,
+    "week": 1,
+    "dateRange": "29 Dec 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "DOC AI product saving optimization added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 52,
+    "dateRange": "22 Dec 2025 – 23 Dec 2025",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "DOC AI product saving optimization added",
+      "Table no search & job id search & cart Id missing field changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 51,
+    "dateRange": "15 Dec 2025 – 18 Dec 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Fixes & optimization added",
+      "Query generation code added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 50,
+    "dateRange": "11 Dec 2025 – 12 Dec 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Cart QR Code logic updated",
+      "V1 code base added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 49,
+    "dateRange": "01 Dec 2025 – 03 Dec 2025",
+    "title": "Shared Spring Boot Auth & Multi-tenant Access Control",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Total Discount Value mapping added",
+      "Stock status update added & inventory integration added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 47,
+    "dateRange": "18 Nov 2025 – 19 Nov 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Highway",
+      "Twinleaves Common Starter"
+    ],
+    "accomplishments": [
+      "X-user-info header commented",
+      "Category priority related changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 46,
+    "dateRange": "10 Nov 2025 – 14 Nov 2025",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Commented TableId & TableNumber",
+      "New Api's added -> Revert edited quantity & cart integration"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 45,
+    "dateRange": "03 Nov 2025 – 05 Nov 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "POS Service"
+    ],
+    "accomplishments": [
+      "Mark Removed & update task status with interservice communication added",
+      "Mark as Complementary - Api Changes added as per UI"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 44,
+    "dateRange": "28 Oct 2025 – 31 Oct 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Twinleaves Common Starter"
+    ],
+    "accomplishments": [
+      "Code commented -> rounding grand total for cash",
+      "Version changes added for commons-starter"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 43,
+    "dateRange": "20 Oct 2025 – 24 Oct 2025",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Highway"
+    ],
+    "accomplishments": [
+      "OrgAndLocationCheck Implementation related config added",
+      "Latest Version added 1.0.2"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 42,
+    "dateRange": "15 Oct 2025 – 17 Oct 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet User"
+    ],
+    "accomplishments": [
+      "Variant Unmerge related fixes added",
+      "MrpTotal field related changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 41,
+    "dateRange": "06 Oct 2025 – 11 Oct 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Ai Commons"
+    ],
+    "accomplishments": [
+      "Third party related Integrations added",
+      "Completed changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 39,
+    "dateRange": "22 Sep 2025 – 24 Sep 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Twinleaves Common Starter"
+    ],
+    "accomplishments": [
+      "LocationId & Org Id related changes added",
+      "Gst revert index name added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 38,
+    "dateRange": "15 Sep 2025 – 19 Sep 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Setting cart product status -> UserRequested default value",
+      "Cart Order place for restaurant merge product related logic added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 37,
+    "dateRange": "08 Sep 2025 – 11 Sep 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "File library related code-base added",
+      "Fixes added for product removal if batch no is null"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 36,
+    "dateRange": "01 Sep 2025 – 05 Sep 2025",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Ai Commons",
+      "Pallet User"
+    ],
+    "accomplishments": [
+      "Optimization added",
+      "Sync related changes added for index-wise"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 35,
+    "dateRange": "26 Aug 2025 – 28 Aug 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Pallet User"
+    ],
+    "accomplishments": [
+      "Improvement added in the code & added reviews for improvements & logic changes",
+      "Fixes added for b2b user update"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 34,
+    "dateRange": "18 Aug 2025 – 21 Aug 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Ai Commons",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Improvements added for the cloud run alerts",
+      "HO related implementation added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 33,
+    "dateRange": "11 Aug 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Fixes added for wastage related changes",
+      "Fixes added for world context"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 32,
+    "dateRange": "04 Aug 2025 – 08 Aug 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Ai related multiple fetching & creation in background added",
+      "Fixes added for null value"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 31,
+    "dateRange": "28 Jul 2025 – 31 Jul 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Twinleaves Common Starter"
+    ],
+    "accomplishments": [
+      "HO related implementation added",
+      "Dependency injection was missing ProductCommonDao added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 30,
+    "dateRange": "21 Jul 2025 – 23 Jul 2025",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Twinleaves Common Starter"
+    ],
+    "accomplishments": [
+      "Hot fixes added for location search",
+      "Aggregated filters & empty barcode generation added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 29,
+    "dateRange": "14 Jul 2025 – 17 Jul 2025",
+    "title": "Shared Spring Boot Auth & Multi-tenant Access Control",
+    "domains": [
+      "Cart & Promotions",
+      "Twinleaves Common Starter"
+    ],
+    "accomplishments": [
+      "New dependency added",
+      "Auth related changes added -> RoleAuthorization , PlanAuthorization, PermissionAuthorization, (LocationAuthorization - needs to change)"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 28,
+    "dateRange": "07 Jul 2025 – 11 Jul 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Code-owners added",
+      "Vendor name mapping related new apis added & along with segragation of external apis"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 27,
+    "dateRange": "30 Jun 2025 – 03 Jul 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Chatbot"
+    ],
+    "accomplishments": [
+      "Deactivate related changes added",
+      "ProductId added in the product filter v2/ api"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 26,
+    "dateRange": "23 Jun 2025 – 26 Jun 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Sales channel related changes removed",
+      "Bringing back to in_stock changes added for subOrderType change"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 25,
+    "dateRange": "16 Jun 2025 – 19 Jun 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Fixes added for the across all Sync duplicate product creation",
+      "CurrentUserName added in the create order api"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 24,
+    "dateRange": "09 Jun 2025 – 13 Jun 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Fixes added for the raised bugs: EX-> Activate Deactivate Variant , SellingUnit Quantity to Double",
+      "Fixes added for the app api & remove all product empty response fixes"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 23,
+    "dateRange": "03 Jun 2025 – 04 Jun 2025",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Offer Product related fixes added",
+      "Fixes added for the check product already exists or not"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 22,
+    "dateRange": "26 May 2025 – 30 May 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Fixes added for cgst null value",
+      "StatusCode.java Multiple inventory found code changes 400 -> 1101"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 21,
+    "dateRange": "20 May 2025 – 23 May 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Fix added for /v4/add/product api's due to BaseResponse Changes in dao layer",
+      "Code improvement added & foodType added in the cart apis"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 20,
+    "dateRange": "12 May 2025 – 16 May 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Cron"
+    ],
+    "accomplishments": [
+      "Code review changes added & re-requested to update @Amol",
+      "Inventory sync field name changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 19,
+    "dateRange": "05 May 2025 – 08 May 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "B2C_APP variant ListedOn.java added",
+      "Null pointer exception handled ProductDao.java for IGST"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 18,
+    "dateRange": "29 Apr 2025 – 02 May 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Multiple recipe create api added",
+      "Restaurant new get product api added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 17,
+    "dateRange": "22 Apr 2025 – 23 Apr 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Edit tax master & slab api updated as per UI Requirement",
+      "Document sequence DataIntegrityViolationException exception handled"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 16,
+    "dateRange": "15 Apr 2025 – 16 Apr 2025",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Case-insensitive added for storeReference search",
+      "Cart product related new api added /v2"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 15,
+    "dateRange": "07 Apr 2025 – 09 Apr 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Pallet B2C App Testing",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Proper error added for product tax mapping fetch",
+      "No slab component found error added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 13,
+    "dateRange": "24 Mar 2025",
+    "title": "Core Platform Architecture for Pallet Timeline",
+    "domains": [
+      "Pallet Timeline"
+    ],
+    "accomplishments": [
+      "Codebase initiated"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 12,
+    "dateRange": "17 Mar 2025 – 18 Mar 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Version Type added as Force in Content create api",
+      "Tax-code filter query updated for pagination"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 11,
+    "dateRange": "11 Mar 2025 – 14 Mar 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Tax Engine Ui",
+      "Pallet Timeline"
+    ],
+    "accomplishments": [
+      "Bool query minimum should match added as 1",
+      "Service product activate deactivate api added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 10,
+    "dateRange": "03 Mar 2025 – 07 Mar 2025",
+    "title": "Core Platform Architecture for .Github Private",
+    "domains": [
+      ".Github Private",
+      "Catalog Platform",
+      "Plusmax Sponsorship"
+    ],
+    "accomplishments": [
+      "Variant inventory integration added",
+      "Vite config urls added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 9,
+    "dateRange": "27 Feb 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Bulk creation query changes added in ProductV2Dao.java",
+      "TaxComponentType add in TaxComponentFilter.java & Currency conversion related changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 8,
+    "dateRange": "17 Feb 2025 – 22 Feb 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog Platform",
+      "Plusmax Company",
+      "Plusmax Purchase"
+    ],
+    "accomplishments": [
+      "Fetch form by form id api added",
+      "Tax Master specification update added in formula"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 7,
+    "dateRange": "10 Feb 2025 – 13 Feb 2025",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Audit related api's added",
+      "Calculation related more validation added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 6,
+    "dateRange": "03 Feb 2025 – 08 Feb 2025",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Plusmax B2B End Customer",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Json Response Return API added",
+      "Audit relatec APIs"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 5,
+    "dateRange": "27 Jan 2025 – 01 Feb 2025",
+    "title": "Core Platform Architecture for Catalog Platform",
+    "domains": [
+      "Catalog Platform",
+      "Plusmax Company",
+      "Plusmax Gateway"
+    ],
+    "accomplishments": [
+      "Application-dev.yml changes added for idle pool size",
+      "Bulk upload related changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 4,
+    "dateRange": "20 Jan 2025 – 25 Jan 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Cart & Promotions",
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Variant Id search added",
+      "Company Ids & locationIds filter added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 3,
+    "dateRange": "13 Jan 2025 – 17 Jan 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Pallet Serviceability",
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Revert \"Document update -> inward outward added.\"",
+      "Product Tax Filter code related changes added"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 2,
+    "dateRange": "06 Jan 2025 – 11 Jan 2025",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Display app added",
+      "Document Sequence related filter api & Document New fields addition -> orgName,LocationName"
+    ]
+  },
+  {
+    "year": 2025,
+    "week": 1,
+    "dateRange": "30 Dec 2024 – 02 Jan 2025",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Cart & Promotions",
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Tax Master Id field added in TaxMappingFilter.java",
+      "Document Create new fields added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 52,
+    "dateRange": "23 Dec 2024 – 27 Dec 2024",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Cart & Promotions",
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Product Tax calculation related API's done",
+      "Expiry Date added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 51,
+    "dateRange": "17 Dec 2024 – 20 Dec 2024",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Cart & Promotions",
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "ImportPurchase tax & ignore case added for component search",
+      "Allow Negative selling flag added in /v4 add product api"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 50,
+    "dateRange": "09 Dec 2024 – 14 Dec 2024",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Plusmax B2C App",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Tax Master & Tax Component Related changes added",
+      "Document Id generation changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 49,
+    "dateRange": "02 Dec 2024 – 07 Dec 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "DocumentTemplatedId Removed from the CreateDocumentTemplateRequest.java",
+      "Bulk upload force stop related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 48,
+    "dateRange": "25 Nov 2024 – 30 Nov 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Erp Messaging Service",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "New Elastic config added",
+      "Revert \"Elastic search related changes added.\""
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 47,
+    "dateRange": "20 Nov 2024 – 23 Nov 2024",
+    "title": "Core Platform Architecture for Catalog Platform",
+    "domains": [
+      "Catalog Platform",
+      "Plusmax Company"
+    ],
+    "accomplishments": [
+      "Package Refactor added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 46,
+    "dateRange": "11 Nov 2024 – 16 Nov 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Credentials related changes added",
+      "Credentials changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 45,
+    "dateRange": "05 Nov 2024 – 08 Nov 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Serviceability",
+      "Catalog Platform"
+    ],
+    "accomplishments": [
+      "Inventory check added in v2/product/filter api",
+      "Product activation related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 44,
+    "dateRange": "28 Oct 2024 – 30 Oct 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Logs related changes added",
+      "Barcode search moved to the term to Terms query & App search related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 43,
+    "dateRange": "21 Oct 2024 – 27 Oct 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Filter related changes added",
+      "Hot fix added for the multiple batch response"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 42,
+    "dateRange": "14 Oct 2024 – 17 Oct 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Name related Search fixes added & App suggestion search also fixed",
+      "Weighing Scale Barcode related changes added as per discussion with Relix -> Global Sequence Generator"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 41,
+    "dateRange": "07 Oct 2024 – 10 Oct 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Consumption added for the weighing scale Barcode generate in Bulk Upload",
+      "Bundle Activate DeActivate related API addition. with IMS integration"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 40,
+    "dateRange": "30 Sep 2024 – 04 Oct 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Tags related changes added -> Barcode to Ids mapping -> Variant to Product implementation",
+      "Bug fixes - file upload"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 39,
+    "dateRange": "23 Sep 2024 – 28 Sep 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Manufacturer create, Brand create, Category Create added & along with weighing scale related changes",
+      "Weights and Measurement related changes added in new to old data conversion"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 38,
+    "dateRange": "16 Sep 2024 – 20 Sep 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Bulk Product Creation Fixes added",
+      "Upper page size Limit added for the filter api's"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 37,
+    "dateRange": "09 Sep 2024 – 13 Sep 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "As per @vamsi changes added",
+      "Bug Fixes & Along with bulk product Creation related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 36,
+    "dateRange": "02 Sep 2024 – 06 Sep 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Pub sub issue fixes added -> application-dev.yml",
+      "Bug Fixes v2 to v1 data transfer"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 35,
+    "dateRange": "26 Aug 2024 – 30 Aug 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Bulk Upload related changed added for New CMS",
+      "App related & Some more changes -> new CMS "
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 34,
+    "dateRange": "19 Aug 2024 – 22 Aug 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Supplementary Product added in the OrderRequest.java",
+      "Expiry related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 33,
+    "dateRange": "12 Aug 2024 – 13 Aug 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "So Related New Changes added as per UI",
+      "Merge Product Api added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 32,
+    "dateRange": "05 Aug 2024 – 09 Aug 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Logistics Service",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Merge Product Api added",
+      "Instant Delivery -> filter query modified as per the UI"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 31,
+    "dateRange": "30 Jul 2024 – 01 Aug 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Sync Related retrieval base condition added",
+      "Weighing Scale related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 30,
+    "dateRange": "22 Jul 2024 – 26 Jul 2024",
+    "title": "Geo-Serviceability Engine & Instant Delivery Radii",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Copy Existing Data -> API modified",
+      "Instant Delivery Related Changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 29,
+    "dateRange": "15 Jul 2024 – 19 Jul 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Elasticsearch instance changed for the Dev & Stage Env",
+      "App filter related some changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 28,
+    "dateRange": "10 Jul 2024 – 12 Jul 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Suggestion Api Added. -> Tag search & Global Product Search added for the app",
+      "Current User added for the validated/place/order"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 27,
+    "dateRange": "01 Jul 2024 – 02 Jul 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Removed unnecessary inventory check from the B2C create order",
+      "Delete CartProduct by CartProductId api added -> Sales Order"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 26,
+    "dateRange": "24 Jun 2024 – 28 Jun 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Store Item listing added",
+      "Main category field added in create model"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 25,
+    "dateRange": "20 Jun 2024 – 21 Jun 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Fuzziness added in query -> search",
+      "Time Calculation API modification added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 24,
+    "dateRange": "10 Jun 2024 – 14 Jun 2024",
+    "title": "Geo-Serviceability Engine & Instant Delivery Radii",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Bug Fixes -> Instant Delivery",
+      "Filter Related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 23,
+    "dateRange": "03 Jun 2024 – 05 Jun 2024",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Instant Delivery Related Changes added",
+      "App -> New Search API added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 22,
+    "dateRange": "27 May 2024 – 30 May 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Some Edge case handled while setting the values",
+      "Bigquery testing"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 21,
+    "dateRange": "20 May 2024 – 23 May 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Revamp Changes Added",
+      "Custom Redeemable Loyalty Points changes added as per Anjani"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 20,
+    "dateRange": "13 May 2024",
+    "title": "Core Platform Architecture for Cart & Promotions",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Edit Order related changes added as per Anjani",
+      "Hot fixes -> billing issue fixes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 19,
+    "dateRange": "06 May 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Revamp packaging added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 18,
+    "dateRange": "29 Apr 2024 – 03 May 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Revamp packaging added",
+      "For Rate by distance changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 17,
+    "dateRange": "24 Apr 2024 – 25 Apr 2024",
+    "title": "Core Platform Architecture for Cart & Promotions",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Update Mobile No Added",
+      "Hold Cart Mobile no addition"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 16,
+    "dateRange": "15 Apr 2024",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "For Pos -> Fetching item from whole CMS added & Partial Paid issue fixes"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 14,
+    "dateRange": "02 Apr 2024 – 05 Apr 2024",
+    "title": "Offline POS Inventory Sync & Cashier Operations",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Hot Fix -> null -> SessionId From UI Side",
+      "Offline Pos - Related Changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 13,
+    "dateRange": "25 Mar 2024 – 29 Mar 2024",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Inventory Management System",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Gst no & pan no related changes added -> BillingAddressEntity.java & ShippingAddressEntity.java -> @anjani",
+      "Inventory Response Changes added -> Multiple Batches -> IMSServiceImpl.java"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 12,
+    "dateRange": "18 Mar 2024 – 22 Mar 2024",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Weighing Scale Related Bug Fixed -> Calculation Error Found By Sathish QA in V4 API",
+      "Calculation Related changes added & Code Optimized"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 11,
+    "dateRange": "11 Mar 2024 – 15 Mar 2024",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Inventory Management System",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Bug Fixes For Offer -> Multiple Items appearing",
+      "Cess Related changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 10,
+    "dateRange": "04 Mar 2024 – 07 Mar 2024",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Logistics Service",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Offer Related changes added",
+      "Barcode-Image Generation Added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 9,
+    "dateRange": "26 Feb 2024 – 01 Mar 2024",
+    "title": "Offline POS Inventory Sync & Cashier Operations",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Upcoming Pos-Ui related changes added",
+      "Created & Modified Date Added in order Item"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 8,
+    "dateRange": "22 Feb 2024",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Filter New Fields added & Changes added for Nilgiris Req",
+      "Offer validation -> Removed Code -> Handling Pos Breaking From Backend side"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 7,
+    "dateRange": "12 Feb 2024",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Across Apps GST related changes added",
+      "Gst Related Changes added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 6,
+    "dateRange": "05 Feb 2024 – 09 Feb 2024",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "ItemReference & new changes added",
+      "Product Payload Changed"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 5,
+    "dateRange": "02 Feb 2024",
+    "title": "Core Platform Architecture for Cart & Promotions",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": []
+  },
+  {
+    "year": 2024,
+    "week": 4,
+    "dateRange": "24 Jan 2024 – 26 Jan 2024",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Bulk Upload related changes",
+      "Remove Assets API added"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 3,
+    "dateRange": "15 Jan 2024 – 18 Jan 2024",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Inventory Data Available Unit Integration",
+      "Changes added for images based filter retrieval"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 2,
+    "dateRange": "08 Jan 2024 – 11 Jan 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Item quantity validation rule added in B2C order validate",
+      "Sort added for Slots Filter"
+    ]
+  },
+  {
+    "year": 2024,
+    "week": 1,
+    "dateRange": "02 Jan 2024",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "MManufacturer Bug Fixes"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 52,
+    "dateRange": "26 Dec 2023 – 28 Dec 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Main Category Bug Fixes",
+      "Create Category New Fields Added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 51,
+    "dateRange": "18 Dec 2023 – 22 Dec 2023",
+    "title": "Geo-Serviceability Engine & Instant Delivery Radii",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Order Delivery Related charges added",
+      "Apply Delivery Charges Modification added InventoryChecks"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 50,
+    "dateRange": "11 Dec 2023 – 14 Dec 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Code optimised & performance improvement",
+      "Shipping Charges & Validate Quantity Changes Added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 49,
+    "dateRange": "04 Dec 2023 – 08 Dec 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Filter Api Added with inventory integration",
+      "Region Retrieval using userLat & userLong Changed"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 48,
+    "dateRange": "27 Nov 2023 – 01 Dec 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Load Testing Changes Added",
+      "Bulk Upload Validation new field added -> BatchNo;"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 47,
+    "dateRange": "20 Nov 2023 – 24 Nov 2023",
+    "title": "Geo-Serviceability Engine & Instant Delivery Radii",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Instant Delivery Related Changes Added",
+      "Filter Changed to JPA Repository -> Criteria Builder"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 46,
+    "dateRange": "14 Nov 2023 – 17 Nov 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Status Code 269 added for multiple Batch return",
+      "Region Related APi's added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 45,
+    "dateRange": "06 Nov 2023 – 10 Nov 2023",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "All FreeBie Validation issues fixed",
+      "Offer Integration -> Validation API new Edge-case handled"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 44,
+    "dateRange": "30 Oct 2023 – 04 Nov 2023",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Suggestion search improvisation",
+      "Index added for all environments"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 43,
+    "dateRange": "26 Oct 2023 – 27 Oct 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Slot Config Added",
+      "Wallet Integration - Check added while placing order"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 42,
+    "dateRange": "16 Oct 2023 – 20 Oct 2023",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Only 2 Days Slot Retrieval Added",
+      "Buy 2 or more implementation"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 41,
+    "dateRange": "09 Oct 2023 – 13 Oct 2023",
+    "title": "Cart Promotion Engine & Bundle Discount Matching",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Tag new field addition",
+      "Slot Creation Flow new validation added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 40,
+    "dateRange": "03 Oct 2023 – 06 Oct 2023",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Slot Related Changes added",
+      "Slot Creation & Slot Retrieval code-base initiated"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 39,
+    "dateRange": "27 Sep 2023 – 29 Sep 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Edit Product New fields added",
+      "Payments related changes added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 38,
+    "dateRange": "19 Sep 2023 – 22 Sep 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Offline Pos Agent",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Sales Order API's Separation",
+      "Filter Api - Added total Size"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 37,
+    "dateRange": "11 Sep 2023 – 14 Sep 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Cart Weighing-Scale integration added in V2",
+      "Cart Weighing Scale Bug Fixes"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 36,
+    "dateRange": "04 Sep 2023 – 08 Sep 2023",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Cloud Printer Agent"
+    ],
+    "accomplishments": [
+      "Cart-Inventory integration Phase-II",
+      "Global Search Engine -> Product Status added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 35,
+    "dateRange": "30 Aug 2023 – 01 Sep 2023",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Random name & user-id generation removed",
+      "Global Search Engine -> Product Status added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 33,
+    "dateRange": "14 Aug 2023 – 19 Aug 2023",
+    "title": "Cloud Printer Agent & WebSocket Store Pipeline",
+    "domains": [
+      "Cart & Promotions",
+      "Cloud Printer Agent"
+    ],
+    "accomplishments": [
+      "Printer Find implementation added",
+      "FreeBie Integration -> Order"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 32,
+    "dateRange": "07 Aug 2023 – 11 Aug 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Weighing scale integration implementation changed",
+      "Loose -> weighingScale"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 31,
+    "dateRange": "31 Jul 2023 – 04 Aug 2023",
+    "title": "Offline POS Inventory Sync & Cashier Operations",
+    "domains": [
+      "Catalog & Search",
+      "Offline Pos",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Create Order for Pos Api Added with new Req MachineCode",
+      "New APi's Addition"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 30,
+    "dateRange": "24 Jul 2023 – 27 Jul 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Feign exception handling",
+      "License Id field"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 29,
+    "dateRange": "17 Jul 2023 – 20 Jul 2023",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Catalog & Search",
+      "Inventory Management System",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Offline Pos Test 1",
+      "Cors Adding for local"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 28,
+    "dateRange": "11 Jul 2023 – 13 Jul 2023",
+    "title": "Core Platform Architecture for Cart & Promotions",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Held cart implementation changed",
+      "Hold cart only 3 at one-time Implemented"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 27,
+    "dateRange": "03 Jul 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Field changed to bigDecimal to string",
+      "Order by desc added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 26,
+    "dateRange": "27 Jun 2023 – 30 Jun 2023",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Product Tags new field added",
+      "Item level subtotal calculation fixed"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 25,
+    "dateRange": "19 Jun 2023 – 24 Jun 2023",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Db config & env change",
+      "Db Config Changes added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 24,
+    "dateRange": "12 Jun 2023 – 16 Jun 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Bulk Product added",
+      "UN_HOLD Status added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 23,
+    "dateRange": "07 Jun 2023 – 11 Jun 2023",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Cart & Promotions",
+      "Pallet Comms",
+      "Pallet User"
+    ],
+    "accomplishments": [
+      ".html extension added",
+      "Quantity edit in Api Modified"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 22,
+    "dateRange": "29 May 2023 – 01 Jun 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Serviceability"
+    ],
+    "accomplishments": [
+      "Update application.yml",
+      "Billing -> SubTotal issue fixed"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 21,
+    "dateRange": "22 May 2023 – 23 May 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "New es index for local-dev products",
+      "Sorting by modified date added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 20,
+    "dateRange": "15 May 2023 – 19 May 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Cart coupon bug fixes",
+      "Update application-prod.yml"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 19,
+    "dateRange": "08 May 2023 – 11 May 2023",
+    "title": "Core Platform Architecture for Cart & Promotions",
+    "domains": [
+      "Cart & Promotions"
+    ],
+    "accomplishments": [
+      "Selling price through UI input cap added",
+      "Date/Time ZoneId changed"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 18,
+    "dateRange": "02 May 2023 – 05 May 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Market Place sellable field added",
+      "Loyalty & skip cart implementation started"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 17,
+    "dateRange": "24 Apr 2023",
+    "title": "Core Platform Architecture for Pallet Comms",
+    "domains": [
+      "Pallet Comms"
+    ],
+    "accomplishments": []
+  },
+  {
+    "year": 2023,
+    "week": 16,
+    "dateRange": "17 Apr 2023 – 21 Apr 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Edit product image upload issue fixing",
+      "Version config removed from other files"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 15,
+    "dateRange": "10 Apr 2023 – 13 Apr 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Pos"
+    ],
+    "accomplishments": [
+      "Cart sorted data added",
+      "Edit product with images"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 14,
+    "dateRange": "03 Apr 2023 – 07 Apr 2023",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Local-product index config added",
+      "Update Dockerfile"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 13,
+    "dateRange": "27 Mar 2023 – 31 Mar 2023",
+    "title": "GCP Cloud Infrastructure & CI/CD Pipeline Build",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Billing also empty given while creating cart",
+      "Server Side rendering added using node"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 12,
+    "dateRange": "23 Mar 2023 – 24 Mar 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Catalog CI-CD Final test",
+      "Updated CORS list added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 11,
+    "dateRange": "14 Mar 2023 – 17 Mar 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "In CartEntity.java all fields added",
+      "Bulk Category Upload added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 10,
+    "dateRange": "06 Mar 2023 – 09 Mar 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Updated CORS list added",
+      "Cors list updated"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 9,
+    "dateRange": "28 Feb 2023 – 02 Mar 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Cart & Promotions",
+      "Pallet Website",
+      "Retail Services"
+    ],
+    "accomplishments": [
+      "Server side rendering added",
+      "Cart manual product quantity api added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 8,
+    "dateRange": "21 Feb 2023 – 24 Feb 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Prod setup added",
+      "Prod setup configuration added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 7,
+    "dateRange": "13 Feb 2023 – 16 Feb 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Create Product Api added with Multipart",
+      "Notification routes added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 6,
+    "dateRange": "06 Feb 2023 – 12 Feb 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Pallet Comms"
+    ],
+    "accomplishments": [
+      "Local & stage cors list added",
+      "Notification routes added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 5,
+    "dateRange": "30 Jan 2023 – 02 Feb 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Billing & Inventory checks modified",
+      "Pubsub for local separate added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 4,
+    "dateRange": "23 Jan 2023 – 27 Jan 2023",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Exception handling added",
+      "Flush All cart products added"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 3,
+    "dateRange": "16 Jan 2023 – 20 Jan 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Integration with OMS added",
+      "Db Connection issue fixed"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 2,
+    "dateRange": "09 Jan 2023 – 10 Jan 2023",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Cart & Promotions",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Sandbox fetch Gst by pan issue resolved",
+      "Cart basic code base initiated"
+    ]
+  },
+  {
+    "year": 2023,
+    "week": 1,
+    "dateRange": "03 Jan 2023 – 05 Jan 2023",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Commons code implemented",
+      "Sandbox Kyc Api Added"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 52,
+    "dateRange": "26 Dec 2022 – 30 Dec 2022",
+    "title": "Tax Calculation Engine & Jurisdictional Master",
+    "domains": [
+      "Catalog & Search",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Category Level hsn & gst attributes added",
+      "Multiple product image & es prod setup added"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 51,
+    "dateRange": "19 Dec 2022 – 23 Dec 2022",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Cart & Promotions",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Export functionality added",
+      "Vendor Filter & search & prod setup implemented"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 50,
+    "dateRange": "15 Dec 2022 – 16 Dec 2022",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Sort functionality added",
+      "Vendor Logo upload updated"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 49,
+    "dateRange": "05 Dec 2022 – 07 Dec 2022",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Db connections reduced",
+      "Hikari Connections removed"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 48,
+    "dateRange": "29 Nov 2022 – 01 Dec 2022",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search",
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Using vendor id & vendor name able to search added",
+      "Vendor Product api response changed"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 47,
+    "dateRange": "21 Nov 2022 – 27 Nov 2022",
+    "title": "Catalog Hierarchy Sync & Multi-tenant Store Overrides",
+    "domains": [
+      "Catalog & Search",
+      "Pallet Notifications"
+    ],
+    "accomplishments": [
+      "Bug resolved in Category fetching",
+      "For Image conversion pub sub added"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 45,
+    "dateRange": "09 Nov 2022 – 11 Nov 2022",
+    "title": "Elasticsearch Indexing & Query Pipeline Optimization",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Bulk upload added using PubSub",
+      "Api response changed & pagination added in search Api"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 44,
+    "dateRange": "31 Oct 2022",
+    "title": "Core Platform Architecture for Catalog & Search",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "Es Configuration updated"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 43,
+    "dateRange": "28 Oct 2022",
+    "title": "GCP Cloud Infrastructure & CI/CD Pipeline Build",
+    "domains": [
+      "Catalog & Search"
+    ],
+    "accomplishments": [
+      "CMS code base initiated successfully",
+      "Docker image pushed to GCP"
+    ]
+  },
+  {
+    "year": 2022,
+    "week": 40,
+    "dateRange": "03 Oct 2022 – 06 Oct 2022",
+    "title": "AI Catalog Agent & Automated Merchant Onboarding",
+    "domains": [
+      "Vendor Onboarding"
+    ],
+    "accomplishments": [
+      "Update README.md",
+      "Main branch reverted"
+    ]
+  }
+]

@@ -84,6 +84,13 @@ export default function Nav() {
           </ul>
 
           <div className="flex items-center gap-2">
+            <a
+              href="/resume"
+              className="rounded-full border border-accent/40 bg-accent/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-accent hover:bg-accent hover:text-on-accent transition-colors"
+            >
+              Resume
+            </a>
+
             <ThemeSwitcher className="hidden sm:flex" />
 
             <button
@@ -134,6 +141,19 @@ export default function Nav() {
                     </a>
                   </motion.li>
                 ))}
+                <motion.li
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: nav.length * 0.05 }}
+                >
+                  <a
+                    href="/resume"
+                    onClick={() => setOpen(false)}
+                    className="block rounded-2xl px-4 py-3 font-display tracking-widest text-accent hover:bg-accent/20"
+                  >
+                    Resume (PDF)
+                  </a>
+                </motion.li>
               </ul>
 
               {/* the switcher is too wide for the mobile bar, so it lives here */}

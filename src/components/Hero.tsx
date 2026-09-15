@@ -117,6 +117,9 @@ export default function Hero() {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <ThwipButton href={hero.ctaPrimary.href}>{hero.ctaPrimary.label}</ThwipButton>
+            <ThwipButton href="/resume" variant="ghost">
+              View Resume
+            </ThwipButton>
             <ThwipButton href={hero.ctaSecondary.href} variant="ghost">
               {hero.ctaSecondary.label}
             </ThwipButton>
