@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { achievements, feats } from "@/content/portfolio";
+import { achievements, feats, repoContributions } from "@/content/portfolio";
 import { useTheme } from "@/themes/ThemeProvider";
 import Ornament from "./Ornament";
 import Section from "./ui/Section";
@@ -67,6 +67,62 @@ export default function Feats() {
           </motion.li>
         ))}
       </ul>
+
+      {/* 40+ Repositories Breakdown Showcase */}
+      <div className="mt-14 border-t border-fg/10 pt-10">
+        <div className="mb-8 flex flex-col gap-2">
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+              Platform Footprint
+            </span>
+            <span className="rounded-full bg-accent/15 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent">
+              40+ Repositories
+            </span>
+          </div>
+          <h3 className="font-display text-2xl uppercase tracking-wide text-fg md:text-3xl">
+            Systems & Repositories Contributed
+          </h3>
+          <p className="max-w-2xl text-sm leading-relaxed text-muted md:text-base">
+            From zero-to-one microservices to real-time shop-floor agents, shared platform starters, 
+            and automated test suites — here is a snapshot across the repository ecosystem I helped build and scale.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {repoContributions.map((cat, idx) => (
+            <motion.div
+              key={cat.category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              data-spidey
+              className="panel-light bg-ink-soft/80 p-6 backdrop-blur-sm"
+            >
+              <h4 className="border-b border-fg/10 pb-3 font-display text-base uppercase tracking-wider text-accent">
+                {cat.category}
+              </h4>
+              <ul className="mt-4 divide-y divide-fg/5 space-y-3">
+                {cat.repos.map((r) => (
+                  <li key={r.name} className="pt-3 first:pt-0">
+                    <div className="flex flex-wrap items-baseline justify-between gap-1.5">
+                      <span className="font-mono text-xs font-semibold text-fg tracking-wide">
+                        {r.name}
+                      </span>
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-accent2">
+                        {r.role}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-xs text-muted leading-relaxed">
+                      {r.desc}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </Section>
   );
 }

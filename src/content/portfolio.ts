@@ -64,9 +64,9 @@ export const about = {
   ],
   stats: [
     { value: "4+", label: "Years Experience" },
+    { value: "40+", label: "Repositories Contributed" },
     { value: "11", label: "Microservices Led" },
     { value: "1M+", label: "Catalog Products" },
-    { value: "1,000+", label: "Stores Powered" },
   ],
 };
 
@@ -282,12 +282,59 @@ export const experience: Job[] = [
 
 /** The "Feats" band — numbers worth stating plainly. */
 export const feats = [
+  { value: "40+", label: "Repositories Contributed", detail: "Across core backends, microservices, CLI agents & UI" },
   { value: "112ms", label: "Add-to-cart latency", detail: "Reduced from 2s under 10k QPS" },
   { value: "< 18ms", label: "p99 search latency", detail: "1M+ products, 45K+ QPM" },
   { value: "100K+", label: "Daily tax calculations", detail: "DAG engine with p99 < 20ms" },
   { value: "1,000+", label: "Stores powered", detail: "POS, Restaurant, B2C & B2B" },
   { value: "50K–80K", label: "Daily print jobs", detail: "Cloud Printer Agent across 400+ stores" },
-  { value: "110+", label: "Cloud Run services", detail: "Production GCP microservices managed" },
+];
+
+export const repoContributions = [
+  {
+    category: "Core Commerce & High Scale",
+    repos: [
+      { name: "cms", role: "Catalog & App Content Engine", desc: "Elasticsearch indexing, multi-level hierarchy, 45K+ QPM" },
+      { name: "pallet-cart", role: "Shared Cart Engine", desc: "Multi-tenant cart, promotions, 112ms p99 latency" },
+      { name: "pallet-tax-engine", role: "Tax Master & DAG Engine", desc: "100K+ daily calculations, sub-20ms DAG pipeline" },
+      { name: "pallet-serviceability", role: "Geo-Serviceability Engine", desc: "PostGIS instant/slotted delivery calculation < 45ms" },
+      { name: "plusmax-cms", role: "Merchant App Content", desc: "Dynamic layouts, banner feeds, festival updates" },
+      { name: "plusmax-company", role: "Company & Multi-tenant Config", desc: "Store hierarchies, merchant profiles, tenant policies" },
+    ],
+  },
+  {
+    category: "Store Infrastructure & Real-Time Ops",
+    repos: [
+      { name: "pallet-printer", role: "Cloud Printer Agent", desc: "WebSocket + polling fallback, 50K-80K print jobs/day" },
+      { name: "pallet-pos-service", role: "POS Cloud Gateway", desc: "Billing, offline cash registers, token syncing" },
+      { name: "pallet-comms-agent", role: "Communications Agent", desc: "Background SMS, WhatsApp Business, transactional mailers" },
+      { name: "pallet-highway", role: "Logistics Highway", desc: "Rider dispatch, slotted order fulfillment pipelines" },
+      { name: "vms", role: "Vendor Management System", desc: "Purchase orders, supplier catalog matching, ledger syncing" },
+      { name: "offline-pos-agent", role: "Offline POS Agent", desc: "Local SQLite caching & auto-sync during internet dropouts" },
+    ],
+  },
+  {
+    category: "AI, Tools & Platform Starters",
+    repos: [
+      { name: "pallet-ai-commons", role: "AI Commons Library", desc: "Lock-free CAS JDBC pool, token metering (5-11ms)" },
+      { name: "pallet-mcp-service", role: "Model Context Protocol Service", desc: "AI assistant tools for live store data & commands" },
+      { name: "pallet-chatbot", role: "AI Merchant Assistant", desc: "Natural language catalog & promotion builder agent" },
+      { name: "twinleaves-common-starter", role: "Company-wide Spring Starter", desc: "Standardized multi-tenant auth, filters, error handling" },
+      { name: "pallet-commons-code", role: "Shared Utilities & DTOs", desc: "Core data contracts shared across 11 microservices" },
+      { name: "pallet-cron", role: "Centralized Scheduler", desc: "Automated reconciliation, inventory audits, billing triggers" },
+    ],
+  },
+  {
+    category: "Frontend, Portals & Automated Testing",
+    repos: [
+      { name: "pallet-rms-ui", role: "Restaurant Management Portal", desc: "Table management, KDS (Kitchen Display), menus" },
+      { name: "pallet-mrms-replit", role: "Merchant Mobile RMS", desc: "Mobile-first merchant dashboard & real-time analytics" },
+      { name: "pallet-website", role: "Pallet Public Platform", desc: "High-performance marketing & product portal" },
+      { name: "pallet-grocery-web-ui", role: "B2C Consumer Web Store", desc: "E-commerce storefront for supermarket chains" },
+      { name: "web-pos-playwrite-automation", role: "E2E POS Test Suite", desc: "Automated regression testing for POS checkout journeys" },
+      { name: "plusmax-erp-automation", role: "ERP Integration Suite", desc: "Automated reconciliation against external ERP ledgers" },
+    ],
+  },
 ];
 
 export const achievements = [
