@@ -50,10 +50,21 @@ export default function Skills() {
                   aria-hidden
                   className="absolute inset-0 opacity-70 [background:repeating-linear-gradient(90deg,transparent_0_12px,var(--color-fg)_12px_13px)]"
                 />
-                {/* spider riding the tip */}
-                <span className="absolute -right-2 top-1/2 -translate-y-1/2 text-accent transition-transform duration-300 group-hover:scale-125">
+                {/* Moving light shimmer pulse */}
+                <motion.span
+                  aria-hidden
+                  animate={{ x: ["-100%", "200%"] }}
+                  transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-y-0 w-20 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                />
+                {/* spider riding the tip with subtle natural bobbing motion */}
+                <motion.span
+                  animate={{ y: ["-50%", "-58%", "-42%", "-50%"] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -right-2 top-1/2 text-accent transition-transform duration-300 group-hover:scale-135 group-hover:rotate-12"
+                >
                   <Spider size={18} />
-                </span>
+                </motion.span>
               </motion.div>
             </div>
           </motion.li>

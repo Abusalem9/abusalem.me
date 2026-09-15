@@ -130,12 +130,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         <ul className="relative mt-6 flex flex-wrap gap-2">
           {project.tags.map((t) => (
-            <li
+            <motion.li
               key={t}
-              className="rounded-full border border-fg/25 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-muted"
+              whileHover={{ scale: 1.08, y: -2 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              className="rounded-full border border-fg/25 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-muted transition-colors hover:border-accent hover:text-accent hover:bg-accent/10"
             >
               {t}
-            </li>
+            </motion.li>
           ))}
         </ul>
 

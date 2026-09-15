@@ -94,19 +94,25 @@ export default function Feats() {
               key={cat.category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -4, transition: { duration: 0.25 } }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               data-spidey
-              className="panel-light bg-ink-soft/80 p-6 backdrop-blur-sm"
+              className="panel-light bg-ink-soft/80 p-6 backdrop-blur-sm transition-all duration-300 hover:border-accent/40 hover:shadow-[6px_6px_0_0_var(--color-accent)]"
             >
               <h4 className="border-b border-fg/10 pb-3 font-display text-base uppercase tracking-wider text-accent">
                 {cat.category}
               </h4>
               <ul className="mt-4 divide-y divide-fg/5 space-y-3">
                 {cat.repos.map((r) => (
-                  <li key={r.name} className="pt-3 first:pt-0">
+                  <motion.li
+                    key={r.name}
+                    whileHover={{ x: 4 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                    className="pt-3 first:pt-0 group/item cursor-default"
+                  >
                     <div className="flex flex-wrap items-baseline justify-between gap-1.5">
-                      <span className="font-mono text-xs font-semibold text-fg tracking-wide">
+                      <span className="font-mono text-xs font-semibold text-fg tracking-wide group-hover/item:text-accent transition-colors">
                         {r.name}
                       </span>
                       <span className="font-mono text-[10px] uppercase tracking-wider text-accent2">
@@ -116,7 +122,7 @@ export default function Feats() {
                     <p className="mt-1 text-xs text-muted leading-relaxed">
                       {r.desc}
                     </p>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </motion.div>

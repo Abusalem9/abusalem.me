@@ -116,13 +116,25 @@ export default function Hero() {
             transition={{ delay: 0.85, duration: 0.6 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <ThwipButton href={hero.ctaPrimary.href}>{hero.ctaPrimary.label}</ThwipButton>
-            <ThwipButton href="/resume" variant="ghost">
-              View Resume
-            </ThwipButton>
-            <ThwipButton href={hero.ctaSecondary.href} variant="ghost">
-              {hero.ctaSecondary.label}
-            </ThwipButton>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.96 }}
+              className="relative"
+            >
+              {/* Subtle ambient accent glow behind primary button */}
+              <span className="absolute -inset-1 rounded-full bg-accent/30 blur-md transition-opacity group-hover:opacity-100" />
+              <ThwipButton href={hero.ctaPrimary.href}>{hero.ctaPrimary.label}</ThwipButton>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.96 }}>
+              <ThwipButton href="/resume" variant="ghost">
+                View Resume
+              </ThwipButton>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.96 }}>
+              <ThwipButton href={hero.ctaSecondary.href} variant="ghost">
+                {hero.ctaSecondary.label}
+              </ThwipButton>
+            </motion.div>
           </motion.div>
         </motion.div>
 

@@ -84,12 +84,17 @@ export default function Timeline() {
               className="relative group"
             >
               {/* Timeline dot node */}
-              <span
+              <motion.span
                 aria-hidden
-                className="absolute -left-[31px] md:-left-[47px] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-ink bg-accent transition-transform duration-300 group-hover:scale-125"
+                animate={{ scale: [1, 1.25, 1], opacity: [0.8, 1, 0.8] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: (idx % 3) * 0.4 }}
+                className="absolute -left-[31px] md:-left-[47px] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-ink bg-accent shadow-[0_0_10px_var(--color-accent)] transition-transform duration-300 group-hover:scale-150"
               />
 
-              <div className="panel-light bg-ink-soft/85 p-6 md:p-7 rounded-2xl border border-fg/15 backdrop-blur-sm transition-shadow duration-300 hover:shadow-[6px_6px_0_0_var(--color-accent)]">
+              <motion.div
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                className="panel-light bg-ink-soft/85 p-6 md:p-7 rounded-2xl border border-fg/15 backdrop-blur-sm transition-all duration-300 hover:border-accent/50 hover:shadow-[8px_8px_0_0_var(--color-accent)]"
+              >
                 {/* Header: Date Range & Week Tag */}
                 <div className="flex flex-wrap items-center justify-between gap-2 pb-2">
                   <span className="font-display text-lg uppercase tracking-wide text-accent md:text-xl">
@@ -136,7 +141,7 @@ export default function Timeline() {
                     ))}
                   </ul>
                 )}
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </AnimatePresence>
