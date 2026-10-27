@@ -66,7 +66,7 @@ export default function ResumeViewer() {
       <main className="flex-1 flex flex-col items-center justify-center p-3 md:p-6 w-full max-w-6xl mx-auto">
         <div className="w-full mb-3 flex items-center justify-between text-xs text-muted font-mono">
           <span>ABUSALEM M — BACKEND SOFTWARE ENGINEER</span>
-          <span className="hidden sm:inline">2 PAGES · PDF</span>
+          <span className="hidden sm:inline">PDF</span>
         </div>
 
         <div className="w-full flex-1 min-h-[78vh] md:min-h-[85vh] rounded-2xl border border-fg/15 overflow-hidden bg-ink-soft/90 shadow-2xl shadow-ink">
