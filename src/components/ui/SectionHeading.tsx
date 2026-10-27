@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTheme } from "@/themes/ThemeProvider";
 import Divider from "./Divider";
 import Sfx from "./Sfx";
 
@@ -13,7 +12,6 @@ type Props = {
 };
 
 export default function SectionHeading({ children, sfx, kicker }: Props) {
-  const { theme } = useTheme();
   const text = typeof children === "string" ? children : "";
   const words = text ? text.split(" ") : null;
 
@@ -67,7 +65,7 @@ export default function SectionHeading({ children, sfx, kicker }: Props) {
           <span className="absolute right-0 top-0 md:static">
             <Sfx
               text={sfx}
-              rotate={theme.id === "panda" ? -4 : -9}
+              rotate={-9}
               className="h-16 w-16 shrink-0 md:h-28 md:w-28"
             />
           </span>

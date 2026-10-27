@@ -43,50 +43,6 @@
   --hero-size: clamp(3rem, 12vw, 9rem);
 }
 
-/* ── Kung Fu Panda: imperial gold, jade, warm ink and parchment ── */
-:root[data-theme="panda"] {
-  --accent: #e8a733;
-  --accent-deep: #a86f14;
-  --accent2: #35a877;
-  --accent2-deep: #1d6b4a;
-  --ink: #0d0b07;
-  --ink-soft: #191309;
-  --fg: #f7efdd;
-  --muted: #c2b295;
-  --pop: #efd9a0;
-  --on-accent: #0d0b07;
-  --accent-ink: #8a5a0c;
-  --display-family: var(--font-yeseva), Georgia, serif;
-  --comic-family: var(--font-caveat), "Comic Sans MS", cursive;
-  --dot-size: 22px;
-  --dot-radius: 1.1px;
-  --panel-radius: 14px;
-  /* Yeseva is a wide serif — it needs to sit smaller to fit the column */
-  --hero-size: clamp(2.4rem, 8.6vw, 6.5rem);
-}
-
-/* ── Minions: goggle yellow, denim blue, rivets ── */
-:root[data-theme="minion"] {
-  --accent: #ffc800;
-  --accent-deep: #d19b00;
-  --accent2: #5b9bd5;
-  --accent2-deep: #2f5f96;
-  --ink: #0a1120;
-  --ink-soft: #131f36;
-  --fg: #fdfbf2;
-  --muted: #a9b6cd;
-  --pop: #ffffff;
-  --on-accent: #0a1120;
-  /* minion yellow is unreadable on cream, so the light-surface accent is denim */
-  --accent-ink: #2f5f96;
-  --display-family: var(--font-luckiest), "Comic Sans MS", cursive;
-  --comic-family: var(--font-bangers), "Comic Sans MS", cursive;
-  --dot-size: 20px;
-  --dot-radius: 2.2px;
-  --panel-radius: 999px;
-  --hero-size: clamp(2.7rem, 10.2vw, 7.6rem);
-}
-
 @keyframes flicker {
   0%,
   100% {
@@ -136,10 +92,7 @@ body {
   color: var(--color-fg);
 }
 
-/* ── Halftone dot field ────────────────────────────────
-   Two offset dot grids. Each theme sets its own grid + dot size, so this
-   reads as newsprint for Spider-Man, rice paper for Panda, and big loud
-   polka dots for the Minions. */
+/* ── Halftone dot field ──────────────────────────────── */
 .halftone {
   background-image:
     radial-gradient(
@@ -156,23 +109,6 @@ body {
   background-position: 0 0, calc(var(--dot-size) / 2) calc(var(--dot-size) / 2);
 }
 
-/* Panda swaps the dot grid for brushed rice-paper fibres. */
-:root[data-theme="panda"] .halftone {
-  background-image:
-    repeating-linear-gradient(
-      92deg,
-      color-mix(in srgb, var(--color-accent) 30%, transparent) 0 1px,
-      transparent 1px 9px
-    ),
-    repeating-linear-gradient(
-      2deg,
-      color-mix(in srgb, var(--color-accent2) 22%, transparent) 0 1px,
-      transparent 1px 14px
-    );
-  background-size: auto, auto;
-  background-position: 0 0, 0 0;
-}
-
 /* ── Panel: thick border + hard offset shadow ────────── */
 .panel {
   border: 3px solid var(--color-ink);
@@ -186,12 +122,6 @@ body {
   border-radius: var(--panel-radius);
 }
 
-/* A pill radius suits the buttons but would balloon the big cards. */
-:root[data-theme="minion"] .panel,
-:root[data-theme="minion"] .panel-light {
-  border-radius: 22px;
-}
-
 /* ── Chunky comic text outline for headlines ──────────── */
 .ink-outline {
   -webkit-text-stroke: 2px var(--color-ink);
@@ -203,13 +133,6 @@ body {
   text-shadow:
     2px 2px 0 var(--color-ink),
     4px 4px 0 var(--color-accent);
-}
-
-/* Panda's serif doesn't want a hard offset plate — a soft ink bleed suits it. */
-:root[data-theme="panda"] .text-shadow-comic {
-  text-shadow:
-    0 2px 14px color-mix(in srgb, var(--color-accent) 45%, transparent),
-    2px 3px 0 var(--color-ink);
 }
 
 /* ── Subtle CRT/print grain over the whole page ───────── */

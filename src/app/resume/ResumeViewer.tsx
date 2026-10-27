@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Mascot from "@/components/ui/Mascot";
-import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 import ComicBackground from "@/components/ComicBackground";
 
 export default function ResumeViewer() {
@@ -59,7 +58,6 @@ export default function ResumeViewer() {
             >
               Direct URL
             </a>
-            <ThemeSwitcher />
           </div>
         </div>
       </header>

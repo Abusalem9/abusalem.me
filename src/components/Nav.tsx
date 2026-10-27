@@ -5,7 +5,6 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { nav } from "@/content/portfolio";
 import { useTheme } from "@/themes/ThemeProvider";
 import Mascot from "./ui/Mascot";
-import ThemeSwitcher from "./ui/ThemeSwitcher";
 
 export default function Nav() {
   const { theme } = useTheme();
@@ -86,32 +85,30 @@ export default function Nav() {
           <div className="flex items-center gap-2">
             <a
               href="/resume"
-              className="rounded-full border border-accent/40 bg-accent/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-accent hover:bg-accent hover:text-on-accent transition-colors"
+              className="rounded-full border border-accent/40 bg-accent/10 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent hover:bg-accent hover:text-on-accent transition-colors"
             >
               Resume
             </a>
 
-            <ThemeSwitcher className="hidden sm:flex" />
-
             <button
               type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-label="Toggle menu"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-label="Toggle menu"
               className="flex h-9 w-9 flex-col items-center justify-center gap-[5px] rounded-full border border-fg/20 md:hidden"
             >
-            <motion.span
-              animate={open ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-4 bg-fg"
-            />
-            <motion.span
-              animate={open ? { opacity: 0 } : { opacity: 1 }}
-              className="block h-[2px] w-4 bg-fg"
-            />
-            <motion.span
-              animate={open ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-4 bg-fg"
-            />
+              <motion.span
+                animate={open ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+                className="block h-[2px] w-4 bg-fg"
+              />
+              <motion.span
+                animate={open ? { opacity: 0 } : { opacity: 1 }}
+                className="block h-[2px] w-4 bg-fg"
+              />
+              <motion.span
+                animate={open ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+                className="block h-[2px] w-4 bg-fg"
+              />
             </button>
           </div>
         </nav>
@@ -155,14 +152,6 @@ export default function Nav() {
                   </a>
                 </motion.li>
               </ul>
-
-              {/* the switcher is too wide for the mobile bar, so it lives here */}
-              <div className="mt-2 flex items-center justify-between gap-3 border-t border-fg/10 px-4 pb-1 pt-4 sm:hidden">
-                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted">
-                  Theme
-                </span>
-                <ThemeSwitcher />
-              </div>
             </motion.div>
           )}
         </AnimatePresence>

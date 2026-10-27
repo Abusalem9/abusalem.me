@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Theme } from "@/themes";
 
 /** Scatter positions, fixed rather than random so SSR and the client agree. */
 const SPOTS = [
@@ -14,7 +13,6 @@ const SPOTS = [
   { x: 7, y: 55, s: 132, r: 7, d: 0.34 },
   { x: 53, y: 76, s: 130, r: 12, d: 0.4 },
   { x: 93, y: 87, s: 118, r: 10, d: 0.46 },
-  // kept clear of dead centre so it doesn't sit under the sound-effect burst
   { x: 70, y: 90, s: 104, r: -14, d: 0.52 },
 ];
 
@@ -51,118 +49,48 @@ function SmallWeb({ delay }: { delay: number }) {
   });
 
   return (
-    <g stroke="currentColor" fill="none" strokeLinecap="round">
+    <g
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      opacity={0.8}
+    >
       {angles.map((a, i) => {
-        const [x, y] = p(a, 46);
+        const [x2, y2] = p(a, 46);
         return (
           <motion.line
             key={i}
             x1={50}
             y1={50}
-            x2={x.toFixed(2)}
-            y2={y.toFixed(2)}
-            strokeWidth={2.4}
+            x2={x2}
+            y2={y2}
+            strokeWidth={1.8}
             {...line(i, delay)}
           />
         );
       })}
       {rings.map((d, i) => (
-        <motion.path key={i} d={d} strokeWidth={2} {...line(i + 8, delay + 0.12)} />
-      ))}
-    </g>
-  );
-}
-
-/**
- * An ensō — the Zen brush circle, drawn in one stroke and left open where the
- * brush lifts. Tapered ends and flicked droplets keep it reading as ink
- * rather than a plain ring.
- */
-function InkBloom({ delay }: { delay: number }) {
-  // open at the top-right, the way a brush leaves it
-  const enso =
-    "M 68 12 C 40 2 8 24 8 52 C 8 80 32 96 56 94 C 82 92 96 70 92 48 C 89 31 80 20 66 14";
-  const drops = [
-    [90, 22, 5.5],
-    [18, 88, 4.4],
-    [76, 88, 3.4],
-  ];
-
-  return (
-    <g stroke="currentColor" fill="none" strokeLinecap="round">
-      {/* the heavy body of the stroke */}
-      <motion.path d={enso} strokeWidth={11} opacity={0.95} {...line(0, delay)} />
-      {/* a lighter pass on top gives the stroke some grain */}
-      <motion.path
-        d={enso}
-        strokeWidth={4}
-        stroke="var(--color-ink)"
-        opacity={0.28}
-        {...line(1, delay + 0.06)}
-      />
-      {/* brush flick trailing out of the opening */}
-      <motion.path d="M 66 14 q 12 -6 22 -12" strokeWidth={5} {...line(2, delay + 0.18)} />
-      {drops.map(([cx, cy, r], i) => (
-        <motion.circle
+        <motion.path
           key={i}
-          cx={cx}
-          cy={cy}
-          r={r}
-          fill="currentColor"
-          stroke="none"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 1.35, 1], opacity: 0.85 }}
-          style={{ transformOrigin: `${cx}px ${cy}px` }}
-          transition={{ duration: 0.4, delay: delay + 0.24 + i * 0.06 }}
+          d={d}
+          strokeWidth={1.4}
+          opacity={0.85}
+          variants={draw}
+          initial="hidden"
+          animate="show"
+          transition={{ duration: 0.45, delay: delay + 0.18 + i * 0.08 }}
         />
       ))}
-    </g>
-  );
-}
-
-/** A minion goggle — rim, lens, strap and rivets. */
-function Goggle({ delay }: { delay: number }) {
-  return (
-    <g stroke="currentColor" fill="none" strokeLinecap="round">
-      <motion.path d="M 4 44 H 20 M 80 44 H 96" strokeWidth={9} {...line(0, delay)} />
-      <motion.circle cx={50} cy={48} r={31} strokeWidth={8} {...line(1, delay)} />
-      <motion.circle cx={50} cy={48} r={19} strokeWidth={4} {...line(2, delay + 0.1)} />
-      <motion.circle
-        cx={54}
-        cy={48}
-        r={8}
-        fill="currentColor"
-        stroke="none"
-        initial={{ scale: 0 }}
-        animate={{ scale: [0, 1.4, 1] }}
-        style={{ transformOrigin: "54px 48px" }}
-        transition={{ duration: 0.4, delay: delay + 0.2 }}
-      />
-      {[0, 1, 2, 3, 4, 5].map((i) => {
-        const a = (i / 6) * Math.PI * 2 + 0.4;
-        return (
-          <motion.circle
-            key={i}
-            cx={(50 + Math.cos(a) * 38).toFixed(2)}
-            cy={(48 + Math.sin(a) * 38).toFixed(2)}
-            r={2.6}
-            strokeWidth={3}
-            {...line(i + 3, delay + 0.16)}
-          />
-        );
-      })}
+      <circle cx={50} cy={50} r={2.4} fill="currentColor" />
     </g>
   );
 }
 
 /**
- * The load-in: a scatter of small themed motifs pop on one after another and
- * stick, then peel off together to reveal the page.
+ * The load-in: small web motifs pop on one after another and stick.
  */
-export default function IntroPops({ theme }: { theme: Theme }) {
-  const Motif =
-    theme.ornament === "bamboo" ? InkBloom : theme.ornament === "goggle" ? Goggle : SmallWeb;
-
+export default function IntroPops() {
   return (
     <div className="absolute inset-0">
       {SPOTS.map((spot, i) => (
@@ -179,7 +107,6 @@ export default function IntroPops({ theme }: { theme: Theme }) {
           }}
           initial={{ scale: 0, opacity: 0, rotate: spot.r - 30 }}
           animate={{
-            // overshoot, then settle — it lands and sticks
             scale: [0, 1.18, 1],
             opacity: [0, 1, 0.85],
             rotate: spot.r,
@@ -192,7 +119,7 @@ export default function IntroPops({ theme }: { theme: Theme }) {
           transition={{ duration: 0.5, delay: spot.d, ease: [0.16, 1, 0.3, 1] }}
         >
           <svg viewBox="0 0 100 100" className="h-full w-full">
-            <Motif delay={spot.d + 0.05} />
+            <SmallWeb delay={spot.d + 0.05} />
           </svg>
         </motion.div>
       ))}

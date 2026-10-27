@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { useReducedMotion } from "framer-motion";
-import { useTheme } from "@/themes/ThemeProvider";
 
 const TRAIL = 16;
 
@@ -10,23 +9,15 @@ type Point = { x: number; y: number };
 type Burst = { x: number; y: number; t: number };
 
 /**
- * Replaces the mouse pointer with something in keeping with the theme:
+ * Spider-Man web cursor:
+ * A web strand trails the pointer, spider-sense arcs flare over
+ * interactive links, and clicking fires a web THWIP burst.
  *
- *   web     — a web strand trails the pointer, spider-sense arcs flare over
- *             links, and clicking fires a THWIP burst.
- *   ink     — a brush nib that lays down a tapering ink stroke and splats
- *             on click.
- *   goggle  — a minion goggle whose pupil leans into the direction of travel,
- *             with a bouncy ring on click.
- *
- * No-ops on touch devices and under prefers-reduced-motion; the normal
- * system cursor stays put in both cases.
+ * No-ops on touch devices and under prefers-reduced-motion.
  */
 export default function ThemeCursor() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reduced = useReducedMotion();
-  const { theme } = useTheme();
-  const mode = theme.cursor;
 
   useEffect(() => {
     if (reduced) return;
@@ -34,21 +25,17 @@ export default function ThemeCursor() {
 
     const canvas = canvasRef.current;
     if (!canvas) return;
-    // hoisted non-null so the nested draw helpers keep the narrowing
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const g: CanvasRenderingContext2D = ctx;
 
     document.body.dataset.webcursor = "on";
 
-    // Palette comes from the CSS variables, so it follows the active theme.
     const css = getComputedStyle(document.documentElement);
     const v = (name: string, fallback: string) =>
       css.getPropertyValue(name).trim() || fallback;
     const ACCENT = v("--accent", "#e62429");
-    const ACCENT2 = v("--accent2", "#3f5bd9");
     const FG = v("--fg", "#f2f4ff");
-    const INK = v("--ink", "#08080d");
 
     let w = window.innerWidth;
     let h = window.innerHeight;
@@ -72,17 +59,14 @@ export default function ThemeCursor() {
     }));
     const bursts: Burst[] = [];
 
-    let hot = 0; // eased 0→1 hover state
+    let hot = 0;
     let hovering = false;
     let visible = false;
-    let vx = 0;
-    let vy = 0;
 
     let lastCheck = 0;
     const onMove = (e: PointerEvent) => {
       target.x = e.clientX;
       target.y = e.clientY;
-      // Immediately set the head of the trail to raw pointer for instantaneous response
       trail[0].x = e.clientX;
       trail[0].y = e.clientY;
 
@@ -94,7 +78,6 @@ export default function ThemeCursor() {
         }
       }
 
-      // Throttle expensive DOM element tree walk
       const now = performance.now();
       if (now - lastCheck > 60) {
         lastCheck = now;
@@ -114,12 +97,10 @@ export default function ThemeCursor() {
     window.addEventListener("pointerdown", onDown, { passive: true });
     document.addEventListener("pointerleave", onLeave);
 
-    // ── web ────────────────────────────────────────────────
     function drawWeb() {
       g.lineCap = "round";
       g.lineJoin = "round";
 
-      // canvas has no color-mix; fade with globalAlpha instead
       g.strokeStyle = FG;
       g.globalAlpha = 0.5;
       g.lineWidth = 1.4;
@@ -219,156 +200,14 @@ export default function ThemeCursor() {
       g.globalAlpha = 1;
     }
 
-    // ── ink ────────────────────────────────────────────────
-    function drawInk() {
-      g.lineCap = "round";
-      g.lineJoin = "round";
-
-      // A stroke that thins toward the tail, like a brush lifting off.
-      for (let i = 0; i < trail.length - 1; i++) {
-        const fade = 1 - i / trail.length;
-        g.globalAlpha = 0.55 * fade * fade;
-        g.strokeStyle = ACCENT;
-        g.lineWidth = 10 * fade * fade + 0.6;
-        g.beginPath();
-        g.moveTo(trail[i].x, trail[i].y);
-        g.lineTo(trail[i + 1].x, trail[i + 1].y);
-        g.stroke();
-      }
-      g.globalAlpha = 1;
-
-      const { x, y } = trail[0];
-      const nib = 6 + hot * 8;
-
-      // brush nib, squashed along the direction of travel
-      const speed = Math.min(Math.hypot(vx, vy) / 22, 1);
-      const ang = Math.atan2(vy, vx);
-      g.save();
-      g.translate(x, y);
-      g.rotate(ang);
-      g.fillStyle = hot > 0.4 ? ACCENT : FG;
-      g.beginPath();
-      g.ellipse(0, 0, nib * (1 + speed * 0.7), nib * (1 - speed * 0.35), 0, 0, Math.PI * 2);
-      g.fill();
-      g.restore();
-
-      // jade ring blooms over anything clickable
-      if (hot > 0.02) {
-        g.globalAlpha = hot * 0.85;
-        g.strokeStyle = ACCENT2;
-        g.lineWidth = 2;
-        g.beginPath();
-        g.arc(x, y, nib + 10 + hot * 6, 0, Math.PI * 2);
-        g.stroke();
-        g.globalAlpha = 1;
-      }
-    }
-
-    function burstInk(b: Burst) {
-      const eased = 1 - Math.pow(1 - b.t, 3);
-      g.globalAlpha = (1 - b.t) * 0.7;
-      g.fillStyle = ACCENT;
-      g.beginPath();
-      g.arc(b.x, b.y, 6 + eased * 26, 0, Math.PI * 2);
-      g.fill();
-      // droplets flung outward
-      for (let k = 0; k < 7; k++) {
-        const a = (k / 7) * Math.PI * 2 + b.t * 1.4;
-        const d = 14 + eased * 60 + (k % 3) * 9;
-        g.beginPath();
-        g.arc(
-          b.x + Math.cos(a) * d,
-          b.y + Math.sin(a) * d,
-          Math.max(0.5, 4 * (1 - b.t) - (k % 3) * 0.6),
-          0,
-          Math.PI * 2,
-        );
-        g.fill();
-      }
-      g.globalAlpha = 1;
-    }
-
-    // ── goggle ─────────────────────────────────────────────
-    function drawGoggle() {
-      const { x, y } = trail[0];
-      const r = 13 + hot * 5;
-
-      // strap trailing behind
-      g.strokeStyle = INK;
-      g.lineWidth = 5;
-      g.globalAlpha = 0.5;
-      g.beginPath();
-      g.moveTo(trail[0].x, trail[0].y);
-      for (let i = 1; i < 6; i++) g.lineTo(trail[i].x, trail[i].y);
-      g.stroke();
-      g.globalAlpha = 1;
-
-      // rim
-      g.fillStyle = INK;
-      g.beginPath();
-      g.arc(x, y, r + 4, 0, Math.PI * 2);
-      g.fill();
-      g.strokeStyle = ACCENT;
-      g.lineWidth = 3;
-      g.beginPath();
-      g.arc(x, y, r + 2.5, 0, Math.PI * 2);
-      g.stroke();
-
-      // eyeball
-      g.fillStyle = "#ffffff";
-      g.beginPath();
-      g.arc(x, y, r, 0, Math.PI * 2);
-      g.fill();
-
-      // pupil leans into the direction of travel
-      const lean = Math.min(Math.hypot(vx, vy) / 14, 1) * (r * 0.42);
-      const a = Math.atan2(vy, vx);
-      const px = x + Math.cos(a) * lean;
-      const py = y + Math.sin(a) * lean;
-      g.fillStyle = "#5a3a1a";
-      g.beginPath();
-      g.arc(px, py, r * 0.46, 0, Math.PI * 2);
-      g.fill();
-      g.fillStyle = INK;
-      g.beginPath();
-      g.arc(px, py, r * 0.26, 0, Math.PI * 2);
-      g.fill();
-      g.fillStyle = "rgba(255,255,255,0.9)";
-      g.beginPath();
-      g.arc(px - r * 0.16, py - r * 0.18, r * 0.11, 0, Math.PI * 2);
-      g.fill();
-    }
-
-    function burstGoggle(b: Burst) {
-      // a bouncy overshooting ring
-      const eased = 1 - Math.pow(1 - b.t, 4);
-      const R = 10 + eased * 60;
-      g.globalAlpha = (1 - b.t) * 0.9;
-      g.strokeStyle = ACCENT;
-      g.lineWidth = 4 * (1 - b.t) + 1;
-      g.beginPath();
-      g.arc(b.x, b.y, R, 0, Math.PI * 2);
-      g.stroke();
-      g.strokeStyle = ACCENT2;
-      g.lineWidth = 2;
-      g.beginPath();
-      g.arc(b.x, b.y, R * 0.62, 0, Math.PI * 2);
-      g.stroke();
-      g.globalAlpha = 1;
-    }
-
     let raf = 0;
     const draw = () => {
       raf = requestAnimationFrame(draw);
       g.clearRect(0, 0, w, h);
       if (!visible) return;
 
-      const prevX = trail[0].x;
-      const prevY = trail[0].y;
       trail[0].x = target.x;
       trail[0].y = target.y;
-      vx = trail[0].x - prevX;
-      vy = trail[0].y - prevY;
 
       for (let i = 1; i < trail.length; i++) {
         trail[i].x += (trail[i - 1].x - trail[i].x) * 0.45;
@@ -376,9 +215,7 @@ export default function ThemeCursor() {
       }
       hot += ((hovering ? 1 : 0) - hot) * 0.25;
 
-      if (mode === "web") drawWeb();
-      else if (mode === "ink") drawInk();
-      else drawGoggle();
+      drawWeb();
 
       for (let i = bursts.length - 1; i >= 0; i--) {
         const b = bursts[i];
@@ -387,9 +224,7 @@ export default function ThemeCursor() {
           bursts.splice(i, 1);
           continue;
         }
-        if (mode === "web") burstWeb(b);
-        else if (mode === "ink") burstInk(b);
-        else burstGoggle(b);
+        burstWeb(b);
       }
     };
     draw();
@@ -402,7 +237,7 @@ export default function ThemeCursor() {
       document.removeEventListener("pointerleave", onLeave);
       delete document.body.dataset.webcursor;
     };
-  }, [reduced, mode]);
+  }, [reduced]);
 
   return (
     <canvas

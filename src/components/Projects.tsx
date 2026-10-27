@@ -9,16 +9,10 @@ import SectionHeading from "./ui/SectionHeading";
 import Sfx from "./ui/Sfx";
 
 /**
- * Rings that pulse out of the card corner while it's hovered — spider-sense
- * for Spider-Man, an ink ripple for Panda, a goggle blink for the Minions.
- * Same idea, three different rhythms.
+ * Rings that pulse out of the card corner while it's hovered — spider-sense.
  */
-function HoverPulse({ shape }: { shape: "web" | "ink" | "goggle" }) {
-  const cfg = {
-    web: { count: 3, duration: 1.2, gap: 0.4, cls: "border-2 border-accent" },
-    ink: { count: 2, duration: 2.4, gap: 1.1, cls: "border border-accent/70" },
-    goggle: { count: 3, duration: 0.9, gap: 0.22, cls: "border-4 border-accent" },
-  }[shape];
+function HoverPulse() {
+  const cfg = { count: 3, duration: 1.2, gap: 0.4, cls: "border-2 border-accent" };
 
   return (
     <span aria-hidden className="pointer-events-none absolute -right-3 -top-3 h-24 w-24">
@@ -50,8 +44,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const sfx = project.sfx ?? theme.projectSfx[index % theme.projectSfx.length];
   const ref = useRef<HTMLElement>(null);
 
-  // Card leans toward the pointer. Each theme leans by a different amount and
-  // settles at its own rate, so the tilt carries the theme's personality.
   const px = useMotionValue(0);
   const py = useMotionValue(0);
   const spring = { stiffness: theme.feel.stiffness, damping: theme.feel.damping };
@@ -108,7 +100,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           className="halftone pointer-events-none absolute inset-0 opacity-[0.07] transition-opacity duration-500 group-hover:opacity-25"
         />
 
-        <HoverPulse shape={theme.cursor} />
+        <HoverPulse />
 
         <span className="relative font-mono text-xs tracking-[0.3em] text-accent">
           #{String(index + 1).padStart(2, "0")}
