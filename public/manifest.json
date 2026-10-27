@@ -1,0 +1,26 @@
+{
+  "name": "Abusalem M — Backend Software Engineer & Technical Lead",
+  "short_name": "Abusalem M",
+  "description": "Backend Software Engineer with 4+ years of experience leading 11 microservices across Java, Spring Boot, and GCP.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08080d",
+  "theme_color": "#e62429",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

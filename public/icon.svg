@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#181a26"/>
+      <stop offset="100%" stop-color="#08080d"/>
+    </radialGradient>
+    <linearGradient id="spiderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3338"/>
+      <stop offset="100%" stop-color="#c81016"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#e62429" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="115" fill="url(#bg)" stroke="#e62429" stroke-width="10" stroke-opacity="0.35"/>
+
+  <g stroke="#ffffff" stroke-opacity="0.07" stroke-width="3" fill="none">
+    <line x1="256" y1="40" x2="256" y2="472"/>
+    <line x1="40" y1="256" x2="472" y2="256"/>
+    <line x1="103" y1="103" x2="409" y2="409"/>
+    <line x1="103" y1="409" x2="409" y2="103"/>
+    <circle cx="256" cy="256" r="60"/>
+    <circle cx="256" cy="256" r="120"/>
+    <circle cx="256" cy="256" r="180"/>
+  </g>
+
+  <g transform="translate(256, 256) scale(4.4)" filter="url(#glow)">
+    <g fill="none" stroke="url(#spiderGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M -6 -6 L -25 -28 L -36 -10" />
+      <path d="M -6 0 L -27 -15 L -38 6" />
+      <path d="M -6 6 L -28 -3 L -37 22" />
+      <path d="M -6 12 L -29 9 L -36 36" />
+
+      <path d="M 6 -6 L 25 -28 L 36 -10" />
+      <path d="M 6 0 L 27 -15 L 38 6" />
+      <path d="M 6 6 L 28 -3 L 37 22" />
+      <path d="M 6 12 L 29 9 L 36 36" />
+    </g>
+
+    <circle cx="0" cy="-14" r="8" fill="url(#spiderGrad)" />
+    <ellipse cx="0" cy="7" rx="11.5" ry="18" fill="url(#spiderGrad)" />
+
+    <ellipse cx="-3.5" cy="-14.5" rx="2" ry="3.5" transform="rotate(-18 -3.5 -14.5)" fill="#f2f4ff" />
+    <ellipse cx="3.5" cy="-14.5" rx="2" ry="3.5" transform="rotate(18 3.5 -14.5)" fill="#f2f4ff" />
+    <path d="M -3 3 L 3 3 L 0 7 Z" fill="#ffffff" opacity="0.9" />
+  </g>
+</svg>
