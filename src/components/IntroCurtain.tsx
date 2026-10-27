@@ -36,7 +36,7 @@ export default function IntroCurtain() {
             animate={{ scale: 1.2, opacity: 0.3 }}
             exit={{ scale: 1.8, opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="absolute h-96 w-96 rounded-full bg-accent blur-[110px]"
+            className="absolute h-96 w-96 rounded-full bg-[radial-gradient(circle,var(--color-accent)_0%,transparent_70%)]"
           />
 
           {/* Center Brand Identity reveal */}

@@ -101,7 +101,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body className="grain flex min-h-full flex-col text-fg">
+      <body className="flex min-h-full flex-col text-fg">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
